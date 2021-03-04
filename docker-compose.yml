@@ -1,0 +1,14 @@
+version: "3.7"
+services:
+  postgres_db:
+    image: postgres
+    container_name: postgres_db
+    environment: 
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=toor
+    ports:
+      - 5432:5432
+    volumes:
+      - ./db:/docker-entrypoint-initdb.d/
+      - ./tmp/db:/var/lib/postgresql/data
+      - ./db/scripts:/scripts/
