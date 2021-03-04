@@ -4,7 +4,7 @@
 
 ![cover](img/cover.jpg)
 
-El propósito de esta aplicación es llevar un registro de los lugares o espacios que ha visitado una persona y en caso de identificarse a una persona contagiada o posiblemente contagiada por COVID, alertar a quienes estuvieron en ese lugar para que de manera oportuna adopten medidas preventivas. La aplicación puede ser utilizada por instituciones educativas o empresas para alertar a sus empleados, alumnos y/o maestros sobre posibles contagios en su entorno.
+*El propósito de esta aplicación es llevar un registro de los lugares o espacios que ha visitado una persona y en caso de identificarse a una persona contagiada o posiblemente contagiada por COVID, alertar a quienes estuvieron en ese lugar para que de manera oportuna adopten medidas preventivas. La aplicación puede ser utilizada por instituciones educativas o empresas para alertar a sus empleados, alumnos y/o maestros sobre posibles contagios en su entorno.
 
 La aplicación esta compuesta por:
 
