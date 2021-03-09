@@ -1,7 +1,7 @@
 class InstitutesController < ActionController::API
 
 
-  def show
+  def index
     @institutes = [
       {
         name: "Ucol"
