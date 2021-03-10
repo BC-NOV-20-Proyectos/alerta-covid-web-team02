@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_08_220832) do
+ActiveRecord::Schema.define(version: 2021_03_09_223535) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -41,4 +41,49 @@ ActiveRecord::Schema.define(version: 2021_03_08_220832) do
     t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
   end
 
+  create_table "institutes", force: :cascade do |t|
+    t.string "name"
+    t.string "address"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "places", force: :cascade do |t|
+    t.string "name"
+    t.string "area"
+    t.bigint "institute_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["institute_id"], name: "index_places_on_institute_id"
+  end
+
+  create_table "sections", force: :cascade do |t|
+    t.string "name"
+    t.bigint "institute_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["institute_id"], name: "index_sections_on_institute_id"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.bigint "institute_id", null: false
+    t.bigint "section_id", null: false
+    t.boolean "reports", default: false, null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["institute_id"], name: "index_users_on_institute_id"
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+    t.index ["section_id"], name: "index_users_on_section_id"
+  end
+
+  add_foreign_key "places", "institutes"
+  add_foreign_key "sections", "institutes"
+  add_foreign_key "users", "institutes"
+  add_foreign_key "users", "sections"
 end
