@@ -1,0 +1,34 @@
+<%= form_with(model: User.new, url:'/users' , local: true) do |form| %>
+
+  <div class="field">
+    <label for="user_email">Email</label><br>
+    <input autofocus="autofocus" autocomplete="email" type="email" value="" name="user[email]" id="user_email">
+  </div>
+
+  <div class="field">
+    <label for="user_password">Password</label>
+    <em>(6 characters minimum)</em>
+    <br>
+    <input autocomplete="new-password" type="password" name="user[password]" id="user_password">
+  </div>
+
+  <div class="field">
+    <label for="user_password_confirmation">Password confirmation</label><br>
+    <input autocomplete="new-password" type="password" name="user[password_confirmation]" id="user_password_confirmation">
+  </div>
+
+  <div class="field">
+    <label for="institute_id">Institute</label><br>
+    <input type="number" name="user[institute_id]" id="institute_id">
+  </div>
+  
+  <div class="field">
+    <label for="section_id">Section</label><br>
+    <input type="number" name="user[section_id]" id="section_id">
+  </div>
+  
+  <div class="actions">
+    <input type="submit" name="commit" value="Sign up" data-disable-with="Sign up">
+  </div>
+<% end %>
+
