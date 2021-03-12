@@ -1,5 +1,10 @@
 ActiveAdmin.register User do
-
+  after_action :send_email, only: :create
+  controller do
+    def send_email
+      UserMailer.send_key(params[:user]).deliver_now
+    end
+  end
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #
