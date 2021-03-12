@@ -4,6 +4,6 @@ class UserMailer < ApplicationMailer
     def send_key(user)
         @user = user
         
-        mail(to: @user.email, subject: 'Here is your Access Key!')
+        mail(to: @user[:email], subject: 'Here is your Access Key!')
     end 
 end

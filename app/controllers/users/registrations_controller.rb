@@ -1,6 +1,14 @@
 # frozen_string_literal: true
 
 class Users::RegistrationsController < Devise::RegistrationsController
+  #before_action :configure_permitted_parameters, if: :devise_controller?
+  #after_action :send_email, only: [:create]
+
+  
+
+ 
+
+
   ##before_action :configure_sign_up_params, only: [:create]
   # before_action :configure_account_update_params, only: [:update]
 
@@ -14,10 +22,10 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # end
 
   # POST /resource
-  # def create
-  #   puts 'entró ahhh############################################'
-  #   super
-  # end
+  #def create
+  #  super 
+      #UserMailer.send_key(params[:user]).deliver_now  
+  #end
 
   # GET /resource/edit
   # def edit
