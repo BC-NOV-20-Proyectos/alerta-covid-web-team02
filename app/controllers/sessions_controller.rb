@@ -1,9 +1,7 @@
 # frozen_string_literal: true
 class SessionsController < Devise::SessionsController  
     skip_before_action :verify_authenticity_token
-    def new
-        render json: {"hola": "hola"}
-    end
+    
     def create
         user = User.find_by_email(sign_in_params[:email])
 
