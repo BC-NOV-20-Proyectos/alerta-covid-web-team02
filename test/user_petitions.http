@@ -1,0 +1,2 @@
+### Login user
+POST http://localhost:3000/users/sign_in?user[email]=luispedro_mendoza@ucol.mx&user[password]=1615596674
