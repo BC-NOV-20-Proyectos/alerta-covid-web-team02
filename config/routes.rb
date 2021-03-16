@@ -3,13 +3,12 @@ Rails.application.routes.draw do
   resources :sections
   resources :places
   resources :institutes
-  devise_for :admin_users, ActiveAdmin::Devise.config
-  
-  devise_for :users,
-  controllers: {
-    registrations: :registrations,
-    sessions: :sessions
+  devise_for :admin_users, ActiveAdmin::Devise.config 
+  devise_for :user, controllers: {
+    sessions: 'sessions'
   }
+
+  get '/api/users', to: "users#get_user"
   ActiveAdmin.routes(self)
 
 

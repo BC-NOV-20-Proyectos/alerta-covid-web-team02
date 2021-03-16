@@ -1,2 +1,9 @@
 ### Login user
-POST http://localhost:3000/users/sign_in?user[email]=luispedro_mendoza@ucol.mx&user[password]=1615596674
+POST http://localhost:3000/user/sign_in?user[email]=luispedro_mendoza@ucol.mx&user[password]=e0ff0964df
+
+### get users
+GET http://localhost:3000/api/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJkNjZmOTIzMy03MGNlLTQxOTQtYjdiNC04MjU4ZDAwYjE4NWEiLCJpZCI6MSwic3ViIjoiMSIsInNjcCI6InVzZXIiLCJhdWQiOm51bGwsImlhdCI6MTYxNTkzNDgwNywiZXhwIjoxNjE1OTM1MTA3fQ.e4ILw5Q2IsdPIH9KStZcZj8CGwOtRMLMpbI49vu7KYs
+### Logout
+DELETE http://localhost:3000/user/sign_out
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJkNjZmOTIzMy03MGNlLTQxOTQtYjdiNC04MjU4ZDAwYjE4NWEiLCJpZCI6MSwic3ViIjoiMSIsInNjcCI6InVzZXIiLCJhdWQiOm51bGwsImlhdCI6MTYxNTkzNDgwNywiZXhwIjoxNjE1OTM1MTA3fQ.e4ILw5Q2IsdPIH9KStZcZj8CGwOtRMLMpbI49vu7KYs
