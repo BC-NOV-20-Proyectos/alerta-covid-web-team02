@@ -28,7 +28,7 @@ ActiveAdmin.register User do
   form title: 'New User' do |f|
     f.inputs do
       f.input :email
-      f.input :password, input_html: { value: Time.now.to_i, readonly: true }
+      f.input :password, input_html: { value: Time.now.to_i.to_s(32), readonly: true }
       f.input :institute_id, as: :select, collection: Institute.all.map { |u| [u.name, u.id] }, include_blank: false
       f.input :section_id, as: :select, collection: Section.all.map { |u| [u.name, u.id] }, include_blank: false
       f.input :reports, as: :boolean
