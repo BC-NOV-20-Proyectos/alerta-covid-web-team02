@@ -1,5 +1,6 @@
 ActiveAdmin.register User do
   after_action :send_email, only: :create
+  
   controller do
     def send_email
       UserMailer.send_key(params[:user]).deliver_now

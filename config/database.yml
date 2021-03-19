@@ -11,8 +11,7 @@ default: &default
   timeout: 5000
   user: root
   password: toor
-  host: localhost
-  port: 5432
+  port: 5433
 
 development:
   <<: *default
