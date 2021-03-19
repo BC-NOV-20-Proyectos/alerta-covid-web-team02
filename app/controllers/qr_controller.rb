@@ -18,8 +18,7 @@ class QrController < ApplicationController
             size: 120 
         )
         id_place = txt_qr.split("|")[1]
-        Base64.encode64(@png.to_s)        
-        puts @png
+        Base64.encode64(@png.to_s)
     end
     
 end
