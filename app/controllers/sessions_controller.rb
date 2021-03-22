@@ -5,9 +5,18 @@ class SessionsController < Devise::SessionsController
     respond_to :json
     private
     def respond_with(resource, _opts = {})
-        render json: resource
+        resJson = {
+            "id": resource["id"],
+            "email": resource["email"],
+            "jti": resource["jti"],
+            "token": request.env['warden-jwt_auth.token']
+        }
+        render json: resJson
     end
     def respond_to_on_destroy
-        head :ok
+        render json: {
+            "error": false,
+            "code": "SSN_CLOSE"
+        }
     end
 end

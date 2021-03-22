@@ -1,10 +1,14 @@
 ### login
-POST http://localhost:3000/user/sign_in?user[email]=jnegrete15@ucol.mx&user[password]=1g551vj
+POST http://localhost:3000/user/sign_in?user[email]=luispedro_mendoza@ucol.mx&user[password]=1g5hg48
+
+### login
+POST http://localhost:3000/api/user/login?user[email]=luispedro_mendoza@ucol.mx&user[password]=1g5hg48
+
 
 ### log out
 DELETE http://localhost:3000/user/sign_out
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIzZTdkMGI3Ny03ZmVkLTRjOWEtYTM3Zi01MzJkZTQwNjcwMmUiLCJpZCI6MSwic3ViIjoiMSIsInNjcCI6InVzZXIiLCJhdWQiOm51bGwsImlhdCI6MTYxNjAyMTg0MSwiZXhwIjoxNjE2MDIyMTQxfQ.sS_i8ufMcsGkjRj9DDb99FTm4nutZkMkH4-s0dg3-fw
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIwODQ1MGY4OC02OWVhLTRhZTYtYjNjYS1lNjllNTY3Y2Y2ODAiLCJpZCI6MTEsInN1YiI6IjExIiwic2NwIjoidXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNjE2NDM4NDIxLCJleHAiOjE2MTY0NDIwMjF9.QFG93MnZk19sWBTcdunULXDV-wX3ki_dexpgps3tdj4
 
 ### get users
 GET http://localhost:3000/api/users
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIzZTdkMGI3Ny03ZmVkLTRjOWEtYTM3Zi01MzJkZTQwNjcwMmUiLCJpZCI6MSwic3ViIjoiMSIsInNjcCI6InVzZXIiLCJhdWQiOm51bGwsImlhdCI6MTYxNjAyMTg0MSwiZXhwIjoxNjE2MDIyMTQxfQ.sS_i8ufMcsGkjRj9DDb99FTm4nutZkMkH4-s0dg3-fw
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIwODQ1MGY4OC02OWVhLTRhZTYtYjNjYS1lNjllNTY3Y2Y2ODAiLCJpZCI6MTEsInN1YiI6IjExIiwic2NwIjoidXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNjE2NDM4NDIxLCJleHAiOjE2MTY0NDIwMjF9.QFG93MnZk19sWBTcdunULXDV-wX3ki_dexpgps3tdj4
