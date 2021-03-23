@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_16_181452) do
+ActiveRecord::Schema.define(version: 2021_03_23_003014) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -41,6 +41,18 @@ ActiveRecord::Schema.define(version: 2021_03_16_181452) do
     t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
   end
 
+  create_table "incidents", force: :cascade do |t|
+    t.boolean "symptomatic"
+    t.boolean "covid_postive"
+    t.boolean "covid_negative"
+    t.bigint "users_id", null: false
+    t.bigint "places_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["places_id"], name: "index_incidents_on_places_id"
+    t.index ["users_id"], name: "index_incidents_on_users_id"
+  end
+
   create_table "institutes", force: :cascade do |t|
     t.string "name"
     t.string "address"
@@ -65,6 +77,12 @@ ActiveRecord::Schema.define(version: 2021_03_16_181452) do
     t.index ["institute_id"], name: "index_sections_on_institute_id"
   end
 
+  create_table "symptoms", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -84,6 +102,8 @@ ActiveRecord::Schema.define(version: 2021_03_16_181452) do
     t.index ["section_id"], name: "index_users_on_section_id"
   end
 
+  add_foreign_key "incidents", "places", column: "places_id"
+  add_foreign_key "incidents", "users", column: "users_id"
   add_foreign_key "places", "institutes"
   add_foreign_key "sections", "institutes"
   add_foreign_key "users", "institutes"
