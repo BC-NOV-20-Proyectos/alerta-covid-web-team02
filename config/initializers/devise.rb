@@ -25,7 +25,7 @@ Devise.setup do |config|
       ['DELETE', %r{^/logout$}],
       ['DELETE', %r{^/api/user/logout$}]
     ]
-    ##jwt.expiration_time = 1.seconds.to_i
+    #jwt.expiration_time = 5.minutes.to_i
   end
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
