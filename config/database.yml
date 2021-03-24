@@ -9,7 +9,9 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   user: root
   password: toor
+  port: 5433
   encoding: unicode
+
 
 development:
   <<: *default
