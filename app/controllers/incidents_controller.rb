@@ -5,17 +5,21 @@ class IncidentsController < ApplicationController
     def create
         user = 12
         places = params[:places]
+        covid_positive = nil
+        covid_negative = nil
+        covid_positive = true if params[:covid_positive]
+        covid_negative = true if params[:covid_positive] == false
         places.each do |place|
             incident = {
                 symptomatic: params[:symptomatic],
-                covid_positive: params[:covid_positive] ? true : nil,
-                covid_negative: !params[:covid_positive] ? true : nil,
+                covid_positive: covid_positive,
+                covid_negative: covid_negative,
                 user_id: user,
                 place_id: place
             }
+            puts incident
             Incident.create!(incident)
         end
-
         render json: {
             "error": false,
             "code": "INC_CREATED"
