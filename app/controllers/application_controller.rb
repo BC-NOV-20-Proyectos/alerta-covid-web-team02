@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  before_action :process_token
+  ##before_action :process_token
   def access_denied(exception)
     redirect_to root_path, alert: exception.message
   end
@@ -29,18 +29,18 @@ class ApplicationController < ActionController::Base
   #   @current_user ||= super || User.find(@current_user_id)
   # end
   
-  def process_token
-    if request.headers['Authorization'].present?
-      begin
-        jwt_payload = JWT.decode(request.headers['Authorization'].split(' ')[1].remove('"'), Rails.application.secrets.secret_key_base).first
-        @current_user_id = jwt_payload['id']
-      rescue JWT::ExpiredSignature, JWT::VerificationError, JWT::DecodeError
-        render json: {
-          "error": true,
-          "code": "AUTH_ERROR"
-        }
-      end
-    end
-  end
+  # def process_token
+  #   if request.headers['Authorization'].present?
+  #     begin
+  #       jwt_payload = JWT.decode(request.headers['Authorization'].split(' ')[1].remove('"'), Rails.application.secrets.secret_key_base).first
+  #       @current_user_id = jwt_payload['id']
+  #     rescue JWT::ExpiredSignature, JWT::VerificationError, JWT::DecodeError
+  #       render json: {
+  #         "error": true,
+  #         "code": "AUTH_ERROR"
+  #       }
+  #     end
+  #   end
+  # end
 
 end

@@ -13,7 +13,7 @@ Rails.application.routes.draw do
       delete '/api/user/logout', to: "sessions#create"
   end
   get "/api/users", to: "users#get_user"
-
+  post "/api/incident", to: "incidents#create"
   
   ActiveAdmin.routes(self)
 
