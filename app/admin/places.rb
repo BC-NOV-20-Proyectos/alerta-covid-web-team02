@@ -14,5 +14,33 @@ ActiveAdmin.register Place do
   #   permitted << :other if params[:action] == 'create' && current_user.admin?
   #   permitted
   # end
+  index do 
+    selectable_column
+    column :name
+    column :area
+    column :institute do |place|
+      "#{Institute.find(place.institute_id).name}"
+    end
+    column :qr do |place| 
+        image_tag "data:image/png;base64, #{QrController.create("#{place.id}|#{place.name}")}" 
+    end
+    actions
+  end
+
+  show do 
+    attributes_table do
+      row :name 
+      row :area
+      row :institute do |place|
+        "#{Institute.find(place.institute_id).name}"
+      end
+      row :created_at
+      row :updated_at
+      row :qr do |place| 
+        image_tag "data:image/png;base64, #{QrController.create("#{place.id}|#{place.name}")}" 
+      end
+    end
+    active_admin_comments
+  end
   
 end
