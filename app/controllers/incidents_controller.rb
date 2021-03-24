@@ -1,9 +1,9 @@
 class IncidentsController < ApplicationController
     skip_before_action :verify_authenticity_token
     before_action :authenticate_user!, only: :create
-
+    puts @current_user_id
     def create
-        user = 12
+        user = @current_user_id
         places = params[:places]
         covid_positive = nil
         covid_negative = nil
