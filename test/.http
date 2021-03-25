@@ -1,10 +1,25 @@
 ### login
-POST http://localhost:3000/user/sign_in?user[email]=jnegrete15@ucol.mx&user[password]=1g551vj
+POST http://localhost:3000/user/sign_in?user[email]=luispedro_mendoza@ucol.mx&user[password]=1g5hg48
+
+### login
+POST http://localhost:3000/api/user/login?user[email]=luispedro_mendoza@ucol.mx&user[password]=1g5hg48
+
+### create incident
+POST http://localhost:3000/api/incident
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJhZGJhYjZlNS03NTUxLTQ1ZmYtODkwYS1lYmU0MTgxYmFkNWIiLCJpZCI6MTEsInN1YiI6IjExIiwic2NwIjoidXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNjE2NjI5NDIzLCJleHAiOjE2MTY2MzMwMjN9.7uQV3Vih9pVGcyFvDavB2HLlFNA4uW3X50fcozj9dtc
+Content-Type: application/json
+Accept: application/json
+
+{
+    "symptomatic": true,
+    "covid_positive": false,
+    "places": [1]
+}
 
 ### log out
 DELETE http://localhost:3000/user/sign_out
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJlZWM3YzJlMS0zY2FlLTQxNmItYWQ5Yi02ZGVkNjhjNDVmODIiLCJpZCI6MSwic3ViIjoiMSIsInNjcCI6InVzZXIiLCJhdWQiOm51bGwsImlhdCI6MTYxNjQ1NDAwMSwiZXhwIjoxNjE2NDU0MzAxfQ.7RlCXPaxnkAUA1Uqv_t8pDkPb0PwSUypQgyUTz11sjo
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJhZGJhYjZlNS03NTUxLTQ1ZmYtODkwYS1lYmU0MTgxYmFkNWIiLCJpZCI6MTEsInN1YiI6IjExIiwic2NwIjoidXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNjE2NjI5NDIzLCJleHAiOjE2MTY2MzMwMjN9.7uQV3Vih9pVGcyFvDavB2HLlFNA4uW3X50fcozj9dtc
 
 ### get users
 GET http://localhost:3000/api/users
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJlZWM3YzJlMS0zY2FlLTQxNmItYWQ5Yi02ZGVkNjhjNDVmODIiLCJpZCI6MSwic3ViIjoiMSIsInNjcCI6InVzZXIiLCJhdWQiOm51bGwsImlhdCI6MTYxNjQ1NDAwMSwiZXhwIjoxNjE2NDU0MzAxfQ.7RlCXPaxnkAUA1Uqv_t8pDkPb0PwSUypQgyUTz11sjo
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJhZGJhYjZlNS03NTUxLTQ1ZmYtODkwYS1lYmU0MTgxYmFkNWIiLCJpZCI6MTEsInN1YiI6IjExIiwic2NwIjoidXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNjE2NjI4OTQ3LCJleHAiOjE2MTY2MzI1NDd9.oUSuv9hW6RG3YTPIlMrFxcBk-EStPAQs2gd4shb_M_E

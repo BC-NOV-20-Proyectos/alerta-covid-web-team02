@@ -7,9 +7,14 @@ Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config 
   devise_for :user, controllers: {
     sessions: 'sessions'
-  }
-
-  get '/api/users', to: "users#get_user"
+  } 
+  devise_scope :user do
+      post '/api/user/login', to: "sessions#create"
+      delete '/api/user/logout', to: "sessions#create"
+  end
+  get "/api/users", to: "users#get_user"
+  post "/api/incident", to: "incidents#create"
+  
   ActiveAdmin.routes(self)
 
 
