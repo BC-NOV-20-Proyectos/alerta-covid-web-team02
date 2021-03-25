@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 class SessionsController < Devise::SessionsController  
-  #  skip_before_action :verify_authenticity_token #, raise: false
+    skip_before_action :verify_authenticity_token #, raise: false
     
     # skip_before_action :verify_authenticity_token
     # skip_before_action :authenticate_user!, :only => "reply", :raise => false
