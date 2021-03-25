@@ -1,5 +1,4 @@
 class ApplicationController < ActionController::Base
-  protect_from_forgery unless: -> { request.format.json? }
   before_action :process_token
   # def access_denied(exception)
   #   redirect_to root_path, alert: exception.message
