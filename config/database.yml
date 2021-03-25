@@ -16,7 +16,6 @@ default: &default
 development:
   <<: *default
   database: db_covid_development
-  port: 5432
   host: localhost
   user: root
   password: toor
