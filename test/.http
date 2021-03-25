@@ -4,11 +4,22 @@ POST http://localhost:3000/user/sign_in?user[email]=luispedro_mendoza@ucol.mx&us
 ### login
 POST http://localhost:3000/api/user/login?user[email]=luispedro_mendoza@ucol.mx&user[password]=1g5hg48
 
+### create incident
+POST http://localhost:3000/api/incident
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJhZGJhYjZlNS03NTUxLTQ1ZmYtODkwYS1lYmU0MTgxYmFkNWIiLCJpZCI6MTEsInN1YiI6IjExIiwic2NwIjoidXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNjE2NjI5NDIzLCJleHAiOjE2MTY2MzMwMjN9.7uQV3Vih9pVGcyFvDavB2HLlFNA4uW3X50fcozj9dtc
+Content-Type: application/json
+Accept: application/json
+
+{
+    "symptomatic": true,
+    "covid_positive": false,
+    "places": [1]
+}
 
 ### log out
 DELETE http://localhost:3000/user/sign_out
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIwODQ1MGY4OC02OWVhLTRhZTYtYjNjYS1lNjllNTY3Y2Y2ODAiLCJpZCI6MTEsInN1YiI6IjExIiwic2NwIjoidXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNjE2NDM4NDIxLCJleHAiOjE2MTY0NDIwMjF9.QFG93MnZk19sWBTcdunULXDV-wX3ki_dexpgps3tdj4
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJhZGJhYjZlNS03NTUxLTQ1ZmYtODkwYS1lYmU0MTgxYmFkNWIiLCJpZCI6MTEsInN1YiI6IjExIiwic2NwIjoidXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNjE2NjI5NDIzLCJleHAiOjE2MTY2MzMwMjN9.7uQV3Vih9pVGcyFvDavB2HLlFNA4uW3X50fcozj9dtc
 
 ### get users
 GET http://localhost:3000/api/users
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIwODQ1MGY4OC02OWVhLTRhZTYtYjNjYS1lNjllNTY3Y2Y2ODAiLCJpZCI6MTEsInN1YiI6IjExIiwic2NwIjoidXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNjE2NDM4NDIxLCJleHAiOjE2MTY0NDIwMjF9.QFG93MnZk19sWBTcdunULXDV-wX3ki_dexpgps3tdj4
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJhZGJhYjZlNS03NTUxLTQ1ZmYtODkwYS1lYmU0MTgxYmFkNWIiLCJpZCI6MTEsInN1YiI6IjExIiwic2NwIjoidXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNjE2NjI4OTQ3LCJleHAiOjE2MTY2MzI1NDd9.oUSuv9hW6RG3YTPIlMrFxcBk-EStPAQs2gd4shb_M_E
