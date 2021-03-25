@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+  before_action :authenticate_user!
   before_action :process_token
   # def access_denied(exception)
   #   redirect_to root_path, alert: exception.message
