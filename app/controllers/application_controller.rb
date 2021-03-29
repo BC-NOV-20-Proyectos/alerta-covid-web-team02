@@ -1,8 +1,11 @@
 class ApplicationController < ActionController::Base
-  before_action :process_token
-  def access_denied(exception)
-    redirect_to root_path, alert: exception.message
-  end
+  #protect_from_forgery with: :exception
+  #skip_before_action :verify_authenticity_token
+  #before_action :process_token
+  # def access_denied(exception)
+  #   redirect_to root_path, alert: exception.message
+  # end
+
 
   private
 

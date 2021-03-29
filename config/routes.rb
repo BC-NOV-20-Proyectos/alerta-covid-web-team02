@@ -8,10 +8,10 @@ Rails.application.routes.draw do
   devise_for :user, controllers: {
     sessions: 'sessions'
   } 
-  devise_scope :user do
-      post '/api/user/login', to: "sessions#create"
-      delete '/api/user/logout', to: "sessions#create"
-  end
+  # devise_scope :user do
+  #     post '/api/user/login', to: "sessions#create"
+  #     delete '/api/user/logout', to: "sessions#create"
+  # end
   get "/api/users", to: "users#get_user"
   post "/api/incident", to: "incidents#create"
   

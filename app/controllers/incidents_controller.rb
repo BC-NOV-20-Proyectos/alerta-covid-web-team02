@@ -1,5 +1,6 @@
 class IncidentsController < ApplicationController
-    skip_before_action :verify_authenticity_token
+    #skip_forgery_protection
+    skip_before_action :verify_authenticity_token, raise: false
     before_action :authenticate_user!, only: :create
     puts @current_user_id
     def create
