@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   # end
   get "/api/users", to: "users#get_user"
   post "/api/incident", to: "incidents#create"
-  
+  get "/api/user_reports", to: "reports#user_report" 
   ActiveAdmin.routes(self)
 
 

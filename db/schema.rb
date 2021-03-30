@@ -66,7 +66,6 @@ ActiveRecord::Schema.define(version: 2021_03_23_234807) do
     t.bigint "institute_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "qr_image"
     t.index ["institute_id"], name: "index_places_on_institute_id"
   end
 
@@ -77,9 +76,15 @@ ActiveRecord::Schema.define(version: 2021_03_23_234807) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["institute_id"], name: "index_sections_on_institute_id"
   end
-  
+
   create_table "symptoms", force: :cascade do |t|
     t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "tickets", force: :cascade do |t|
+    t.string "branch_name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
