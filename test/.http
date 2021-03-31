@@ -15,7 +15,7 @@ Accept: application/json
 
 {
     "symptomatic": false,
-    "covid_positive": true,
+    "covid_positive": false,
     "places": [2]
 }
 
@@ -29,4 +29,11 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI0MzkxNmI4YS02ZmRkLTQ0MDMtY
 
 
 ### generate reports
-GET http://localhost:3000/api/user_reports
+GET http://localhost:3000/api/place_reports
+Content-Type: application/json
+Accept: application/json
+
+{
+    "time_to": "2021-04-15",
+    "time_from": "2021-01-15" 
+}
