@@ -23,11 +23,12 @@ ActiveAdmin.register User do
   # or
   #
   permit_params do
-    permitted = [:password, :email, :institute_id, :section_id, :reports]
+    permitted = [:password, :name, :email, :institute_id, :section_id, :reports]
   end
 
   form title: 'New User' do |f|
     f.inputs do
+      f.input :name
       f.input :email
       f.input :password, input_html: { value: Time.now.to_i.to_s(32), readonly: true }
       f.input :institute_id, as: :select, collection: Institute.all.map { |u| [u.name, u.id] }, include_blank: false
@@ -39,6 +40,7 @@ ActiveAdmin.register User do
 
   index do 
     selectable_column
+    column :name
     column :email
     column :institute do |u|
       "#{Institute.find(u.institute_id).name}"

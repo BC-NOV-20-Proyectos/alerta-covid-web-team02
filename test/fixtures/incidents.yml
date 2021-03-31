@@ -1,15 +1,15 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  symptomatic: 
-  covid_positive: 
-  covid_negative: 
-  user: 
-  place: 
+  symptomatic: 1
+  covid_positive: 1
+  covid_negative: 1
+  user: one
+  place: one
 
 two:
-  symptomatic: 
-  covid_positive: 
-  covid_negative: 
-  user: 
-  place: 
+  symptomatic: 1
+  covid_positive: 1
+  covid_negative: 1
+  user: two
+  place: two

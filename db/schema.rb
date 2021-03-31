@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_23_234807) do
+ActiveRecord::Schema.define(version: 2021_03_30_234914) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,11 +42,11 @@ ActiveRecord::Schema.define(version: 2021_03_23_234807) do
   end
 
   create_table "incidents", force: :cascade do |t|
-    t.boolean "symptomatic"
-    t.boolean "covid_positive"
-    t.boolean "covid_negative"
-    t.bigint "user_id"
-    t.bigint "place_id"
+    t.integer "symptomatic"
+    t.integer "covid_positive"
+    t.integer "covid_negative"
+    t.bigint "user_id", null: false
+    t.bigint "place_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["place_id"], name: "index_incidents_on_place_id"
@@ -66,6 +66,7 @@ ActiveRecord::Schema.define(version: 2021_03_23_234807) do
     t.bigint "institute_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "qr_image"
     t.index ["institute_id"], name: "index_places_on_institute_id"
   end
 
@@ -83,12 +84,6 @@ ActiveRecord::Schema.define(version: 2021_03_23_234807) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "tickets", force: :cascade do |t|
-    t.string "branch_name"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -101,6 +96,7 @@ ActiveRecord::Schema.define(version: 2021_03_23_234807) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "jti", null: false
+    t.string "name", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["institute_id"], name: "index_users_on_institute_id"
     t.index ["jti"], name: "index_users_on_jti", unique: true
@@ -108,6 +104,8 @@ ActiveRecord::Schema.define(version: 2021_03_23_234807) do
     t.index ["section_id"], name: "index_users_on_section_id"
   end
 
+  add_foreign_key "incidents", "places"
+  add_foreign_key "incidents", "users"
   add_foreign_key "places", "institutes"
   add_foreign_key "sections", "institutes"
   add_foreign_key "users", "institutes"
