@@ -1,22 +1,20 @@
-### login
-POST http://localhost:3000/user/sign_in?user[email]=migueloceguera.m@gmail.com&user[password]=1g64s5p
 
 ### login jnegrete
-POST http://localhost:3000/user/sign_in?user[email]=jnegrete15@ucol.mx&user[password]=1g67bq8
+POST http://localhost:3000/user/sign_in?user[email]=luispedro_mendoza@ucol.mx&user[password]=1g6a4ct
 
 ### login
 POST http://localhost:3000/api/user/login?user[email]=migueloceguera.m@gmail.com&user[password]=1g64s5p
 
 ### create incident
 POST http://localhost:3000/api/incident
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI0MzkxNmI4YS02ZmRkLTQ0MDMtYWEwNS0zMTQxYzM2NjQ3N2QiLCJpZCI6NCwic3ViIjoiNCIsInNjcCI6InVzZXIiLCJhdWQiOm51bGwsImlhdCI6MTYxNzE0OTA5MSwiZXhwIjoxNjE3MTUyNjkxfQ.Ef8LquDsmFFtlqgLTwocdmVdJTIV5dmDVjeut6aEmPM
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI4ODI3OGJjMy01ZjVjLTQ5MGMtOGI1Mi0xZmMzMzNjMzRjOTYiLCJpZCI6MTMsInN1YiI6IjEzIiwic2NwIjoidXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNjE3MjM2NDE2LCJleHAiOjE2MTcyNDAwMTZ9.8fmsbCiuAe1MFjiogTobQJwxTCFyfDUGyG-DKUTl8Qw
 Content-Type: application/json
 Accept: application/json
 
 {
-    "symptomatic": false,
+    "symptomatic": true,
     "covid_positive": false,
-    "places": [2]
+    "places": [1,2]
 }
 
 ### log out
@@ -26,6 +24,16 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJhZGJhYjZlNS03NTUxLTQ1ZmYtO
 ### get users
 GET http://localhost:3000/api/users
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI0MzkxNmI4YS02ZmRkLTQ0MDMtYWEwNS0zMTQxYzM2NjQ3N2QiLCJpZCI6NCwic3ViIjoiNCIsInNjcCI6InVzZXIiLCJhdWQiOm51bGwsImlhdCI6MTYxNzE0ODQ4OSwiZXhwIjoxNjE3MTUyMDg5fQ.OkyDS4DZeVJHRgX9TdafTP9vr60p8FvBXY2axRyGhzo
+
+### generate reports
+GET http://localhost:3000/api/place_reports
+Content-Type: application/json
+Accept: application/json
+
+{
+    "time_to": "2021-04-15",
+    "time_from": "2021-01-15" 
+}
 
 
 ### generate reports

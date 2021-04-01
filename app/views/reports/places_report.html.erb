@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="row">
+        <div class="table-responsive col-12">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Institute</th>
+                        <th>Area</th> 
+                        <th>Name</th>
+                        <th class="text-center">Symptomatic</th> 
+                        <th class="text-center">Covid Positive</th> 
+                        <th class="text-center">Covid Negative</th>
+                    <tr>
+                </thead>
+                <tbody>
+                    <% @places_report.each do |incident| %>
+                    <tr>
+                        <td>
+                            <%= incident[:institute] %>
+                        </td>
+                        <td>
+                            <%= incident[:area] %>
+                        </td>
+                        <td>
+                            <%= incident[:name] %>
+                        </td>
+                        <td class="text-center">
+                            <%= incident[:symptomatic] %>
+                        </td>
+                        <td class="text-center">
+                            <%= incident[:covid_positive] %>
+                        </td>
+                        <td class="text-center">
+                            <%= incident[:covid_negative] %>
+                        </td>
+                    </tr>
+                    <%end%>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

@@ -14,7 +14,9 @@ Rails.application.routes.draw do
   # end
   get "/api/users", to: "users#get_user"
   post "/api/incident", to: "incidents#create"
-  get "/api/place_reports", to: "reports#places_report" 
+  get "/reports/user_reports", to: "reports#user_report" 
+  get "/reports/place_reports", to: "reports#places_report_view" 
+  get "/api/reports/place_reports", to: "reports#places_report_api" 
   ActiveAdmin.routes(self)
 
 

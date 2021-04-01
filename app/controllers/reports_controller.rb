@@ -6,13 +6,13 @@ class ReportsController < ApplicationController
         time_from = 10.days.ago.strftime("%Y-%m-%d")
         
         if params[:time_from] and params[:time_to]
-           time_to = params[:time_to]
-           time_from = params[:time_from]
+            time_to = params[:time_to]
+            time_from = params[:time_from]
         end
         
         @incidents = Incident.where("created_at BETWEEN '#{time_from.to_s}'::timestamp AND '#{time_to.to_s}'::timestamp")
         @users_report = format_user_report
-        
+        render "user_report"
     end
 
     def format_user_report
@@ -38,12 +38,18 @@ class ReportsController < ApplicationController
         if params[:time_from] and params[:time_to]
             time_to = params[:time_to]
             time_from = params[:time_from]
-         end
-        
+        end
         @incidents = Incident.select("place_id, SUM(symptomatic) AS symptomatic, SUM(covid_positive) AS positive , SUM(covid_negative) AS negative").where("created_at between '#{time_from}'::timestamp and '#{time_to}'::timestamp").order('positive DESC, symptomatic DESC, negative DESC').group(:place_id);
+    end
+    def places_report_view
+        places_report
+        @places_report = format_place_report
+        render "places_report.html.erb"
+    end
+    def places_report_api
+        place_reports
         render json:{data: format_place_report}
     end
-
     def format_place_report
         report_array = []
         @incidents.each do |incident| 
