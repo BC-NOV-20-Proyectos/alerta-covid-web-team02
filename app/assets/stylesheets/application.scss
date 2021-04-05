@@ -1,2 +1,145 @@
+@import "active_admin/mixins";
+@import "arctic_admin/base";
 @import "bootstrap-sprockets";
 @import "bootstrap";
+body {
+    font-family: "LatoWeb", Arial, sans-serif;
+    color: #323537;
+    background-color: #f9f9f9;
+}
+
+table {
+    border-radius: 10px;
+}
+thead tr {
+    background-color: #5A4DCC;
+    color: #fff;
+}
+
+thead tr a {
+    color: #fff;
+}
+
+body.index .table_actions .member_link {
+    background-color: #ADAAF1;
+}
+
+body.index .table_actions .member_link:hover {
+    background-color: #9491cf;
+}
+
+body.index .table_actions .member_link:focus {
+    background-color: #7e7bb1;
+}
+
+.index {
+    background-color: #f9f9f9;
+}
+
+input[type="submit"] {
+    background-color: #5A4DCC;
+}
+
+#login {
+    border-top: 3px solid #5A4DCC;
+}
+
+#title_bar #titlebar_right .action_item a {
+    background-color: #5A4DCC;
+}
+
+.label {
+    color: #323537;
+}
+
+input[type="submit"]:hover, #title_bar #titlebar_right .action_item a:hover {
+    background-color: #4a3faa;
+}
+
+input[type="submit"]:focus, #title_bar #titlebar_right .action_item a:focus {
+    background-color: #1E1A61;
+}
+
+
+input[type="checkbox"]:checked {
+    background-color: #ADAAF1;
+    border-color: #ADAAF1;
+}
+
+body.index .table_tools .dropdown_menu_button {
+    background-color: #f5f5f5;
+    border: 1px solid #f5f5f5;
+}
+
+body.index .table_tools .dropdown_menu_button:hover {
+    background-color: #5A4DCC;
+}
+
+#header {
+    background-color: #fff;
+}
+.header #utility_nav {
+}
+
+.mainContainer {
+    margin-top: 82px;
+}
+.table-row {
+    justify-content: center;
+    align-items: center;
+}
+
+.h-v-100 {
+    min-height: 100vh;
+}
+
+.breadcrumb {
+    padding: 8px 8px 8px 15px;
+    margin-right: 8px;
+}
+
+table {
+    border-radius: 4px;
+}
+tbody tr {
+    background-color: #fff;
+}
+
+.table-responsive {
+    padding: 0px 8px;
+}
+
+// .index_content {
+//     box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.1) !important;
+// }
+// table {
+//     border-radius: 4px;
+//     box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.1) !important;
+// }
+// tbody {
+//     td {
+//         border-top: 1px solid #eee !important;
+//     }
+// }
+// thead {
+//     tr:first-child th:first-child {
+//         border-radius: 4px 0px 0px 0px;
+//     }
+//     tr:first-child th:last-child {
+//         border-radius: 0px 4px 0px 0px;
+//     }
+// }
+
+// thead tr a:hover {
+//     color: #fff;
+// }
+
+// tr:last-child td:last-child {
+//     border-radius: 0px 0px 4px 0px;
+// }
+// tr:last-child td:first-child {
+//     border-radius: 0px 0px 0px 4px;
+// }
+// tr:last-child {
+//     border-radius: 0px 0px 4px 4px;
+// }
