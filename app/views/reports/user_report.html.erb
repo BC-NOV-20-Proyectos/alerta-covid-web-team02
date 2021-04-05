@@ -1,7 +1,29 @@
-<div class="container">
-    <div class="row">
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<div class="header" id="header">
+        <h1 class="site_title" id="site_title">Users Report</h1>
+        <ul class="header-item tabs" id="utility_nav">
+          <li class="menu_item" id="logout"><a data-method="get" href="/admin/logout">Logout</a></li>
+        </ul>
+</div>
+<div class="container h-100 mainContainer h-v-100">
+    <div class="row table-row h-v-100 align-items-center h-100">
+        <form class="col-12 formDate" method="POST" action="/reports/user_reports">
+            <div>
+                <label>from</label>
+                <input type="text" id="dateFrom" class="date_from" name="time_from" value="<%= params[:time_from] %>" autocomplete="off">
+            </div>
+            <div class="ms-2">
+                <label>To</label>
+                <input type="text" id="dateTo" name="time_to" value="<%= params[:time_to] %>" autocomplete="off">
+            </div>
+            <div class="ms-2">
+                <input type="submit" value="Generar">
+            </div>
+        </form>
         <div class="table-responsive col-12">
-            <table class="table table-striped">
+            <table class="table">
                 <thead>
                     <tr>
                         <th>Institute</th>
@@ -25,13 +47,16 @@
                             <%= incident[:name] %>
                         </td>
                         <td class="text-center">
-                            <%= "x" if incident[:symptomatic] == 1 %>
+                            <div class='<%= "mark-check" if incident[:symptomatic] == 1 %>'>
+                            </div>
                         </td>
                         <td class="text-center">
-                            <%= "x" if incident[:covid_positive] == 1 %>
+                            <div class='<%= "mark-check" if incident[:covid_positive] == 1 %>'>
+                            </div>
                         </td>
                         <td class="text-center">
-                            <%= "x" if incident[:covid_negative] == 1 %>
+                            <div class='<%= "mark-check" if incident[:covid_negative] == 1 %>'>
+                            </div>
                         </td>
                     </tr>
                     <%end%>
@@ -40,3 +65,4 @@
         </div>
     </div>
 </div>
+<%= javascript_pack_tag 'reports.js'%>

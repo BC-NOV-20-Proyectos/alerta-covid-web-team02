@@ -1,3 +1,19 @@
+GIT
+  remote: https://github.com/derekprior/momentjs-rails.git
+  revision: e2b2dd166b121ded02cdcc54f49fa1f0146c7094
+  specs:
+    momentjs-rails (2.20.1)
+      railties (>= 3.1)
+
+GIT
+  remote: https://github.com/zpaulovics/datetimepicker-rails.git
+  revision: 36d21cec5da7f5b214925804f60e63c61c747023
+  branch: master
+  submodules: true
+  specs:
+    datetimepicker-rails (4.7.16)
+      momentjs-rails (>= 2.9.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -247,6 +263,9 @@ GEM
     selenium-webdriver (3.142.7)
       childprocess (>= 0.5, < 4.0)
       rubyzip (>= 1.2.2)
+    simple_form (5.1.0)
+      actionpack (>= 5.2)
+      activemodel (>= 5.2)
     spring (2.1.1)
     spring-watcher-listen (2.0.1)
       listen (>= 2.7, < 4.0)
@@ -304,10 +323,12 @@ DEPENDENCIES
   bootstrap-sass
   byebug
   capybara (>= 2.15)
+  datetimepicker-rails!
   devise
   devise-jwt
   jbuilder (~> 2.7)
   listen (~> 3.2)
+  momentjs-rails (~> 2.9)!
   pg
   puma (~> 4.1)
   rack-cors
@@ -315,6 +336,7 @@ DEPENDENCIES
   rqrcode
   sass-rails (>= 6)
   selenium-webdriver
+  simple_form
   spring
   spring-watcher-listen (~> 2.0.0)
   turbolinks (~> 5)

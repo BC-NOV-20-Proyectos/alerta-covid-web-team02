@@ -7,13 +7,13 @@ POST http://localhost:3000/api/user/login?user[email]=migueloceguera.m@gmail.com
 
 ### create incident
 POST http://localhost:3000/api/incident
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI4ODI3OGJjMy01ZjVjLTQ5MGMtOGI1Mi0xZmMzMzNjMzRjOTYiLCJpZCI6MTMsInN1YiI6IjEzIiwic2NwIjoidXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNjE3MjM2NDE2LCJleHAiOjE2MTcyNDAwMTZ9.8fmsbCiuAe1MFjiogTobQJwxTCFyfDUGyG-DKUTl8Qw
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI4ODI3OGJjMy01ZjVjLTQ5MGMtOGI1Mi0xZmMzMzNjMzRjOTYiLCJpZCI6MTMsInN1YiI6IjEzIiwic2NwIjoidXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNjE3NjU1NTY3LCJleHAiOjE2MTc2NTkxNjd9.OarFZyz2VhqLfzSTJi3E2ksaoLMQ3tnmhXOp5ygoWUU
 Content-Type: application/json
 Accept: application/json
 
 {
     "symptomatic": true,
-    "covid_positive": false,
+    "covid_positive": null,
     "places": [1,2]
 }
 
@@ -35,9 +35,8 @@ Accept: application/json
     "time_from": "2021-01-15" 
 }
 
-
 ### generate reports
-GET http://localhost:3000/api/place_reports
+GET http://localhost:3000/api/reports/place_reports
 Content-Type: application/json
 Accept: application/json
 

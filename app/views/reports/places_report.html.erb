@@ -1,3 +1,6 @@
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <div class="header" id="header">
         <h1 class="site_title" id="site_title">Places Report</h1>
         <ul class="header-item tabs" id="utility_nav">
@@ -6,6 +9,19 @@
 </div>
 <div class="container h-100 mainContainer h-v-100">
     <div class="row table-row h-v-100 align-items-center h-100">
+        <form class="col-12 formDate" method="POST" action="/reports/place_reports">
+            <div>
+                <label>from</label>
+                <input type="text" id="dateFrom" class="date_from" name="time_from" value="<%= params[:time_from] %>" autocomplete="off">
+            </div>
+            <div class="ms-2">
+                <label>To</label>
+                <input type="text" id="dateTo" name="time_to" value="<%= params[:time_to] %>" autocomplete="off">
+            </div>
+            <div class="ms-2">
+                <input type="submit" value="Generar">
+            </div>
+        </form>
         <div class="table-responsive col-12">
             <table class="table">
                 <thead>
@@ -46,3 +62,4 @@
         </div>
     </div>
 </div>
+<%= javascript_pack_tag 'reports.js'%>
