@@ -1,13 +1,13 @@
 
 ### login jnegrete
-POST http://localhost:3000/user/sign_in?user[email]=luispedro_mendoza@ucol.mx&user[password]=1g6a4ct
+POST http://localhost:3000/user/sign_in?user[email]=jnegrete15@ucol.mx&user[password]=1g67bq8
 
 ### login
 POST http://localhost:3000/api/user/login?user[email]=migueloceguera.m@gmail.com&user[password]=1g64s5p
 
 ### create incident
 POST http://localhost:3000/api/incident
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI4ODI3OGJjMy01ZjVjLTQ5MGMtOGI1Mi0xZmMzMzNjMzRjOTYiLCJpZCI6MTMsInN1YiI6IjEzIiwic2NwIjoidXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNjE3NjU1NTY3LCJleHAiOjE2MTc2NTkxNjd9.OarFZyz2VhqLfzSTJi3E2ksaoLMQ3tnmhXOp5ygoWUU
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJiZDlmZTZjNS04ODE1LTQyOTktYjhhNi1hMGQ2NzcwM2NlMzkiLCJpZCI6NCwic3ViIjoiNCIsInNjcCI6InVzZXIiLCJhdWQiOm51bGwsImlhdCI6MTYxNzY3MDYzMiwiZXhwIjoxNjE3Njc0MjMyfQ.x6zAjM79vANtT-5SylHUbsV980rIrLFIEP3CS_kOha8
 Content-Type: application/json
 Accept: application/json
 
@@ -19,7 +19,7 @@ Accept: application/json
 
 ### log out
 DELETE http://localhost:3000/user/sign_out
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJhZGJhYjZlNS03NTUxLTQ1ZmYtODkwYS1lYmU0MTgxYmFkNWIiLCJpZCI6MTEsInN1YiI6IjExIiwic2NwIjoidXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNjE2NjI5NDIzLCJleHAiOjE2MTY2MzMwMjN9.7uQV3Vih9pVGcyFvDavB2HLlFNA4uW3X50fcozj9dtc
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJiZDlmZTZjNS04ODE1LTQyOTktYjhhNi1hMGQ2NzcwM2NlMzkiLCJpZCI6NCwic3ViIjoiNCIsInNjcCI6InVzZXIiLCJhdWQiOm51bGwsImlhdCI6MTYxNzY3MDYzMiwiZXhwIjoxNjE3Njc0MjMyfQ.x6zAjM79vANtT-5SylHUbsV980rIrLFIEP3CS_kOha8
 
 ### get users
 GET http://localhost:3000/api/users
