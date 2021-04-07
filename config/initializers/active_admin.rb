@@ -1,4 +1,12 @@
 ActiveAdmin.setup do |config|
+  config.namespace :admin do |admin|
+    admin.build_menu do |menu|
+      menu.add :label => "Reports" do |pages|
+        pages.add :label => "Users report", :url => "/reports/user_reports"
+        pages.add :label => "Places report", :url => "/reports/place_reports"
+      end
+    end
+  end
   # == Site Title
   #
   # Set the title that is displayed on the main layout

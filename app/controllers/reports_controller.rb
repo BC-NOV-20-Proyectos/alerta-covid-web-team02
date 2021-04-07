@@ -1,6 +1,14 @@
 class ReportsController < ApplicationController
     skip_before_action :verify_authenticity_token
-    before_action :authenticate_user!, only: [:user_report, :places_report_view]
+    before_action :auth, only: [:user_report, :places_report_view]
+
+    def auth
+        if user_signed_in? == false && admin_user_signed_in? == false
+            authenticate_user!
+        end 
+        @path_signout = "/users/sign_out" if user_signed_in?
+        @path_signout = "/admin/logout" if admin_user_signed_in?
+    end
     def user_report
         time_to = (Time.now + 1.day).strftime("%Y-%m-%d")
         time_from = 10.days.ago.strftime("%Y-%m-%d")

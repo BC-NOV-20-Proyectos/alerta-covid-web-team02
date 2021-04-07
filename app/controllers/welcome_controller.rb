@@ -1,7 +1,6 @@
 class WelcomeController < ActionController::Base
   def index
-    puts user_signed_in?
-    if user_signed_in? == false
+    if user_signed_in? == false && admin_user_signed_in? == false
       authenticate_user!
     end
   end

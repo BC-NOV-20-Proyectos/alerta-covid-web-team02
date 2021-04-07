@@ -14,7 +14,7 @@ Rails.application.routes.draw do
     get "reports/place_reports", to: "reports#places_report_api" 
     post "reports/place_reports", to: "reports#places_report_api" 
   end
-  devise_for :user
+  devise_for :users
   get "/reports/user_reports", to: "reports#user_report" 
   post "/reports/user_reports", to: "reports#user_report" 
   get "/reports/place_reports", to: "reports#places_report_view" 
