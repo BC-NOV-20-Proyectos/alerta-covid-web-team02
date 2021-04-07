@@ -4,7 +4,7 @@
 <div class="header" id="header">
         <h1 class="site_title" id="site_title">Users Report</h1>
         <ul class="header-item tabs" id="utility_nav">
-          <li class="menu_item" id="logout"><a data-method="get" href="/admin/logout">Logout</a></li>
+          <li class="menu_item" id="logout"><a data-method="delete" href="/user/sign_out">Logout</a></li>
         </ul>
 </div>
 <div class="container h-100 mainContainer h-v-100">
@@ -47,15 +47,15 @@
                             <%= incident[:name] %>
                         </td>
                         <td class="text-center">
-                            <div class='<%= "mark-check" if incident[:symptomatic] == 1 %>'>
+                            <div class='<%= "mark-check--red" if incident[:symptomatic] == 1 %>'>
                             </div>
                         </td>
                         <td class="text-center">
-                            <div class='<%= "mark-check" if incident[:covid_positive] == 1 %>'>
+                            <div class='<%= "mark-check--red" if incident[:covid_positive] == 1 %>'>
                             </div>
                         </td>
                         <td class="text-center">
-                            <div class='<%= "mark-check" if incident[:covid_negative] == 1 %>'>
+                            <div class='<%= "mark-check--green" if incident[:covid_negative] == 1 %>'>
                             </div>
                         </td>
                     </tr>

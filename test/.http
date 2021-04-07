@@ -2,12 +2,15 @@
 ### login jnegrete
 POST http://localhost:3000/user/sign_in?user[email]=jnegrete15@ucol.mx&user[password]=1g67bq8
 
+### login luispedro
+POST http://localhost:3000/api/user/sign_in?api_user[email]=lpedromendoza333@gmail.com&api_user[password]=1g6p4c8
+
 ### login
-POST http://localhost:3000/api/user/login?user[email]=migueloceguera.m@gmail.com&user[password]=1g64s5p
+POST http://localhost:3000/user/login?user[email]=migueloceguera.m@gmail.com&user[password]=1g64s5p
 
 ### create incident
 POST http://localhost:3000/api/incident
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJiZDlmZTZjNS04ODE1LTQyOTktYjhhNi1hMGQ2NzcwM2NlMzkiLCJpZCI6NCwic3ViIjoiNCIsInNjcCI6InVzZXIiLCJhdWQiOm51bGwsImlhdCI6MTYxNzY3MDYzMiwiZXhwIjoxNjE3Njc0MjMyfQ.x6zAjM79vANtT-5SylHUbsV980rIrLFIEP3CS_kOha8
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIyMTliY2VjNi05YTc4LTQxYzUtOThkYy03ZGYyM2U2NmJmZGMiLCJpZCI6MTUsInN1YiI6IjE1Iiwic2NwIjoiYXBpX3VzZXIiLCJhdWQiOm51bGwsImlhdCI6MTYxNzc0OTUxNSwiZXhwIjoxNjE3NzUzMTE1fQ.9q4VJfT6PnlEGorjmadgSnfxzy0ys1whGl51JImJsac
 Content-Type: application/json
 Accept: application/json
 
@@ -18,25 +21,16 @@ Accept: application/json
 }
 
 ### log out
-DELETE http://localhost:3000/user/sign_out
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJiZDlmZTZjNS04ODE1LTQyOTktYjhhNi1hMGQ2NzcwM2NlMzkiLCJpZCI6NCwic3ViIjoiNCIsInNjcCI6InVzZXIiLCJhdWQiOm51bGwsImlhdCI6MTYxNzY3MDYzMiwiZXhwIjoxNjE3Njc0MjMyfQ.x6zAjM79vANtT-5SylHUbsV980rIrLFIEP3CS_kOha8
+DELETE http://localhost:3000/api/user/sign_out
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIzNDE5YzYxYS0yOWNjLTQ3ZDItODJhMS0yYTRjYTJmNjhjMWEiLCJpZCI6MTUsInN1YiI6IjE1Iiwic2NwIjoidXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNjE3NzQ2MDQ0LCJleHAiOjE2MTc3NDk2NDR9.gOaFR4rSSRACtj4012dR6w_JiKPWzyJMTz75-4jOOxs
 
 ### get users
 GET http://localhost:3000/api/users
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI0MzkxNmI4YS02ZmRkLTQ0MDMtYWEwNS0zMTQxYzM2NjQ3N2QiLCJpZCI6NCwic3ViIjoiNCIsInNjcCI6InVzZXIiLCJhdWQiOm51bGwsImlhdCI6MTYxNzE0ODQ4OSwiZXhwIjoxNjE3MTUyMDg5fQ.OkyDS4DZeVJHRgX9TdafTP9vr60p8FvBXY2axRyGhzo
 
 ### generate reports
-GET http://localhost:3000/api/place_reports
-Content-Type: application/json
-Accept: application/json
-
-{
-    "time_to": "2021-04-15",
-    "time_from": "2021-01-15" 
-}
-
-### generate reports
 GET http://localhost:3000/api/reports/place_reports
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIyMTliY2VjNi05YTc4LTQxYzUtOThkYy03ZGYyM2U2NmJmZGMiLCJpZCI6MTUsInN1YiI6IjE1Iiwic2NwIjoiYXBpX3VzZXIiLCJhdWQiOm51bGwsImlhdCI6MTYxNzc0OTUxNSwiZXhwIjoxNjE3NzUzMTE1fQ.9q4VJfT6PnlEGorjmadgSnfxzy0ys1whGl51JImJsac
 Content-Type: application/json
 Accept: application/json
 

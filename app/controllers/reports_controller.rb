@@ -1,6 +1,6 @@
 class ReportsController < ApplicationController
     skip_before_action :verify_authenticity_token
-    
+    before_action :authenticate_user!, only: [:user_report, :places_report_view]
     def user_report
         time_to = (Time.now + 1.day).strftime("%Y-%m-%d")
         time_from = 10.days.ago.strftime("%Y-%m-%d")
@@ -44,11 +44,6 @@ class ReportsController < ApplicationController
         places_report
         @places_report = format_place_report
         render "places_report.html.erb"
-    end
-    def places_report_api
-        places_report
-        @places_report = format_place_report
-        render json:{data: @places_report}
     end
     def format_place_report
         report_array = []
