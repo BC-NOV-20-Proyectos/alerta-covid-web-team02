@@ -16,7 +16,7 @@ Accept: application/json
 
 {
     "symptomatic": true,
-    "covid_positive": null,
+    "covid_positive": true,
     "places": [1,2]
 }
 

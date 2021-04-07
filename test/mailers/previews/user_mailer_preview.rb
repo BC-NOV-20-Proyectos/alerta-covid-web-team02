@@ -3,4 +3,8 @@ class UserMailerPreview < ActionMailer::Preview
     def send_key_preview 
         UserMailer.send_key(User.first)
     end
+
+    def send_alert_preview 
+        UserMailer.send_alert(["La coca", "La pepsi"], "alberto@gmail.com")
+    end
 end
