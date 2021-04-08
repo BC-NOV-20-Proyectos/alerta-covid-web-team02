@@ -1,6 +1,6 @@
 
 ### login jnegrete
-POST http://localhost:3000/user/sign_in?user[email]=jnegrete15@ucol.mx&user[password]=1g67bq8
+POST http://localhost:3000/api/user/sign_in?api_user[email]=jnegrete15@ucol.mx&api_user[password]=1g67bq8
 
 ### login luispedro
 POST http://localhost:3000/api/user/sign_in?api_user[email]=lpedromendoza333@gmail.com&api_user[password]=1g6p4c8
@@ -10,7 +10,7 @@ POST http://localhost:3000/user/login?user[email]=migueloceguera.m@gmail.com&use
 
 ### create incident
 POST http://localhost:3000/api/incident
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJkNTRkNThkYy0xZjdkLTQ3NTctYWJjOC02NDhiY2I2ZTdiZTQiLCJpZCI6MTUsInN1YiI6IjE1Iiwic2NwIjoiYXBpX3VzZXIiLCJhdWQiOm51bGwsImlhdCI6MTYxNzgzMDI4MiwiZXhwIjoxNjE3ODMzODgyfQ.qlV-6D53Q2Pi1qz5sIkC-5Xw-liRAiT0wsVy2D5JbLA
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI1NGMwMzQ3YS01NjlkLTQzYzEtYWQ3NS1lMmFmNGViMTU5YTYiLCJpZCI6NCwic3ViIjoiNCIsInNjcCI6ImFwaV91c2VyIiwiYXVkIjpudWxsLCJpYXQiOjE2MTc4MzkxMDEsImV4cCI6MTYxNzg0MjcwMX0.3_sMYKvb5RZKcqwQQ4p0ENUS4JwtbRk7ACv0FpkU2bw
 Content-Type: application/json
 Accept: application/json
 
