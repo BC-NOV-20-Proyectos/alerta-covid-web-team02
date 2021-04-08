@@ -1,5 +1,5 @@
 ActiveAdmin.register User do
-  after_action :send_email, only: :create
+  after_action :send_email, only: [:create, :update]
   
   controller do
     def send_email

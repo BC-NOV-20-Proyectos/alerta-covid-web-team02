@@ -1,6 +1,7 @@
 
 ### login jnegrete
-POST http://localhost:3000/api/user/sign_in?api_user[email]=jnegrete15@ucol.mx&api_user[password]=1g67bq8
+POST http://localhost:3000/api/user/sign_in?api_user[email]=jnegrete15@ucol.mx&api_user[password]=1g6us81
+
 
 ### login luispedro
 POST http://localhost:3000/api/user/sign_in?api_user[email]=lpedromendoza333@gmail.com&api_user[password]=1g6p4c8
@@ -34,3 +35,28 @@ Accept: application/json
     "time_to": "2021-04-15",
     "time_from": "2021-01-15" 
 }
+
+
+### login production
+POST https://hidden-cliffs-21927.herokuapp.com/api/user/sign_in?api_user[email]=jnegrete15@ucol.mx&api_user[password]=1g6up60
+
+
+### test incidents production
+POST https://hidden-cliffs-21927.herokuapp.com/api/incident
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJhNTgzYTZlYS0yZTU4LTQ1ZWItYmM1MC01NTg3YjZiZWFmOTQiLCJpZCI6OCwic3ViIjoiOCIsInNjcCI6ImFwaV91c2VyIiwiYXVkIjpudWxsLCJpYXQiOjE2MTc5MTMzMDMsImV4cCI6MTYxNzkxNjkwM30.iGSMY_v8NaApWu2B9mTKFAlt4ro2oqOeg6fc0QOvEQg
+Content-Type: application/json
+Accept: application/json
+
+{
+    "symptomatic": false,
+    "covid_positive": true,
+    "places": [1]
+}
+
+### log out
+DELETE https://hidden-cliffs-21927.herokuapp.com/api/user/sign_out
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJhNTgzYTZlYS0yZTU4LTQ1ZWItYmM1MC01NTg3YjZiZWFmOTQiLCJpZCI6OCwic3ViIjoiOCIsInNjcCI6ImFwaV91c2VyIiwiYXVkIjpudWxsLCJpYXQiOjE2MTc5MTMzMDMsImV4cCI6MTYxNzkxNjkwM30.iGSMY_v8NaApWu2B9mTKFAlt4ro2oqOeg6fc0QOvEQg
+
+
+### login jazbeen 
+POST https://hidden-cliffs-21927.herokuapp.com/api/user/sign_in?api_user[email]=gracielajazmin_chavez@ucol.mx&api_user[password]=1g6uanb
