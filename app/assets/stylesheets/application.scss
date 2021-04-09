@@ -1,13 +1,16 @@
 /*
  *= require bootstrap-datetimepicker
+
 or
  *= require bootstrap-datetimepicker.min
+
+ 
+
 */
 
 @import "active_admin/mixins";
 @import "arctic_admin/base";
-@import "bootstrap-sprockets";
-@import "bootstrap";
+//@import "bootstrap-sprockets";
 body {
     font-family: "LatoWeb", Arial, sans-serif;
     color: #323537;
@@ -83,7 +86,21 @@ body.index .table_tools .dropdown_menu_button:hover {
 
 #header {
     background-color: #fff;
+    z-index: 100;
 }
+
+.btn-logout{
+
+    &:hover{
+        background-color: none;
+        background: none;
+    }
+}
+
+.site_title{
+    z-index: 100;
+}
+
 .header #utility_nav {
 }
 

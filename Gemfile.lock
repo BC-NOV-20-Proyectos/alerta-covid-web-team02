@@ -98,6 +98,10 @@ GEM
     bindex (0.8.1)
     bootsnap (1.7.2)
       msgpack (~> 1.0)
+    bootstrap (4.0.0)
+      autoprefixer-rails (>= 6.0.3)
+      popper_js (>= 1.12.9, < 2)
+      sass (>= 3.5.2)
     bootstrap-sass (3.4.1)
       autoprefixer-rails (>= 5.2.1)
       sassc (>= 2.0.0)
@@ -195,6 +199,7 @@ GEM
       racc (~> 1.4)
     orm_adapter (0.5.0)
     pg (1.2.3)
+    popper_js (1.16.0)
     public_suffix (4.0.6)
     puma (4.3.7)
       nio4r (~> 2.0)
@@ -250,6 +255,11 @@ GEM
     rqrcode_core (0.2.0)
     ruby2_keywords (0.0.4)
     rubyzip (2.3.0)
+    sass (3.7.4)
+      sass-listen (~> 4.0.0)
+    sass-listen (4.0.0)
+      rb-fsevent (~> 0.9, >= 0.9.4)
+      rb-inotify (~> 0.9, >= 0.9.7)
     sass-rails (6.0.0)
       sassc-rails (~> 2.1, >= 2.1.1)
     sassc (2.4.0)
@@ -320,6 +330,7 @@ DEPENDENCIES
   ajax-datatables-rails
   arctic_admin
   bootsnap (>= 1.4.2)
+  bootstrap (~> 4.0.0)
   bootstrap-sass
   byebug
   capybara (>= 2.15)

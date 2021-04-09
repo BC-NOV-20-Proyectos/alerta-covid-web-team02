@@ -1,20 +1,40 @@
-   
-    <div class="header" id="header" style="position: relative !important;">
-        <h1 class="site_title" id="site_title">CovidBright</h1>
-        <ul class="header-item tabs" id="utility_nav">
-          <li class="menu_item" id="logout"><a data-method="delete" href="<%= @path_signout %>">Logout</a></li>
-        </ul>
-    </div>
-    
-    <div class="container h-100 mainContainer h-v-100"> 
-        <div class="row table-row h-v-100 align-items-center h-100"> 
-            <div id="active_admin_content">
-                <div id="login">
-                    <h1 class="site_title" id="site_title">Bienvenido</h1>
-                    <a href="/reports/user_reports">Users report</a>
-                    <a href="/reports/place_reports">Places report</a>
-                    <br>
+<%= stylesheet_link_tag 'welcome', media: 'all', 'data-turbolinks-track' => true %>
+
+<main>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12">
+
+            <header class="header d-flex justify-content-between">
+                <%= image_tag('Logo.svg', class: 'logo') %>
+                <li style="list-style:none;" id="logout"><a class="btn-logout menu_item logout-index" data-method="delete" href="<%= @path_signout %>"></a></li>
+            </header>
+            </div>
+
+            <div class="col-5 pb-5  mr-4">
+                <div class="reports">
+                    <h2>Users reports</h2>
+                    <%= image_tag('user-img.svg', class: 'img-fluid img-reports') %>
+                    <a class="a-user" href="/reports/user_reports">
+                        <button class="btn-user-reports">Enter</button>
+                    </a>
                 </div>
             </div>
-        </div> 
+
+            <div class="col-5 pb-5 ml-4">
+                <div class="reports">
+                    <h2>Places reports</h2>
+                    <%= image_tag('places-img.svg', class: 'img-fluid img-reports') %>
+                    <a href="/reports/place_reports">
+                        <button class="btn-place-reports">Enter</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
     </div>
+</main>
+
+<footer>
+    <%= image_tag('wave-separator.svg', class: 'wave-separator') %>
+</footer>
