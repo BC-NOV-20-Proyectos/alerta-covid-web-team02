@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Incident alert!!!</h1>
+
+    <h3>Incidents were detected in the following places:<h3>
+
+    <ul>
+      <% @places_name.each do |place| %>
+
+        <li>
+          <%= place%>
+        </li>
+    
+      <%end%>
+    </ul>
+    
+    <p>
+      Wear a Mask! Stay at home<br>
+
+      Regards. Covid Detector Team
+    </p>
+  </body>
+</html>

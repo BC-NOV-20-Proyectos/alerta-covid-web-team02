@@ -29,6 +29,14 @@ gem 'activeadmin'
 gem 'pg'
 gem 'devise-jwt'
 gem 'rqrcode'
+gem 'bootstrap-sass'
+gem 'arctic_admin'
+gem 'simple_form'
+gem 'ajax-datatables-rails'
+gem 'momentjs-rails', '~> 2.9',  :github => 'derekprior/momentjs-rails'
+gem 'datetimepicker-rails', github: 'zpaulovics/datetimepicker-rails', branch: 'master', submodules: true
+
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
