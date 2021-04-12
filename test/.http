@@ -1,14 +1,62 @@
-### login
-POST http://localhost:3000/user/sign_in?user[email]=luispedro_mendoza@ucol.mx&user[password]=1g5hg48
+
+### login jnegrete
+POST http://localhost:3000/api/user/sign_in?api_user[email]=jnegrete15@ucol.mx&api_user[password]=1g6us81
+
+
+### login luispedro
+POST http://localhost:3000/api/user/sign_in?api_user[email]=lpedromendoza333@gmail.com&api_user[password]=1g6p4c8
 
 ### login
-POST http://localhost:3000/api/user/login?user[email]=luispedro_mendoza@ucol.mx&user[password]=1g5hg48
+POST http://localhost:3000/user/login?user[email]=migueloceguera.m@gmail.com&user[password]=1g64s5p
 
+### create incident
+POST http://localhost:3000/api/incident
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI1NGMwMzQ3YS01NjlkLTQzYzEtYWQ3NS1lMmFmNGViMTU5YTYiLCJpZCI6NCwic3ViIjoiNCIsInNjcCI6ImFwaV91c2VyIiwiYXVkIjpudWxsLCJpYXQiOjE2MTc4MzkxMDEsImV4cCI6MTYxNzg0MjcwMX0.3_sMYKvb5RZKcqwQQ4p0ENUS4JwtbRk7ACv0FpkU2bw
+Content-Type: application/json
+Accept: application/json
+
+{
+    "symptomatic": true,
+    "covid_positive": true,
+    "places": [1,2]
+}
 
 ### log out
-DELETE http://localhost:3000/user/sign_out
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIwODQ1MGY4OC02OWVhLTRhZTYtYjNjYS1lNjllNTY3Y2Y2ODAiLCJpZCI6MTEsInN1YiI6IjExIiwic2NwIjoidXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNjE2NDM4NDIxLCJleHAiOjE2MTY0NDIwMjF9.QFG93MnZk19sWBTcdunULXDV-wX3ki_dexpgps3tdj4
+DELETE http://localhost:3000/api/user/sign_out
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJkNTRkNThkYy0xZjdkLTQ3NTctYWJjOC02NDhiY2I2ZTdiZTQiLCJpZCI6MTUsInN1YiI6IjE1Iiwic2NwIjoiYXBpX3VzZXIiLCJhdWQiOm51bGwsImlhdCI6MTYxNzgzMDI4MiwiZXhwIjoxNjE3ODMzODgyfQ.qlV-6D53Q2Pi1qz5sIkC-5Xw-liRAiT0wsVy2D5JbLA
 
-### get users
-GET http://localhost:3000/api/users
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIwODQ1MGY4OC02OWVhLTRhZTYtYjNjYS1lNjllNTY3Y2Y2ODAiLCJpZCI6MTEsInN1YiI6IjExIiwic2NwIjoidXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNjE2NDM4NDIxLCJleHAiOjE2MTY0NDIwMjF9.QFG93MnZk19sWBTcdunULXDV-wX3ki_dexpgps3tdj4
+### generate reports
+GET http://localhost:3000/api/reports/place_reports
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJkNTRkNThkYy0xZjdkLTQ3NTctYWJjOC02NDhiY2I2ZTdiZTQiLCJpZCI6MTUsInN1YiI6IjE1Iiwic2NwIjoiYXBpX3VzZXIiLCJhdWQiOm51bGwsImlhdCI6MTYxNzgzMDI4MiwiZXhwIjoxNjE3ODMzODgyfQ.qlV-6D53Q2Pi1qz5sIkC-5Xw-liRAiT0wsVy2D5JbLA
+Content-Type: application/json
+Accept: application/json
+
+{
+    "time_to": "2021-04-15",
+    "time_from": "2021-01-15" 
+}
+
+
+### login production
+POST https://hidden-cliffs-21927.herokuapp.com/api/user/sign_in?api_user[email]=jnegrete15@ucol.mx&api_user[password]=1g6up60
+
+
+### test incidents production
+POST https://hidden-cliffs-21927.herokuapp.com/api/incident
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJhNTgzYTZlYS0yZTU4LTQ1ZWItYmM1MC01NTg3YjZiZWFmOTQiLCJpZCI6OCwic3ViIjoiOCIsInNjcCI6ImFwaV91c2VyIiwiYXVkIjpudWxsLCJpYXQiOjE2MTc5MTMzMDMsImV4cCI6MTYxNzkxNjkwM30.iGSMY_v8NaApWu2B9mTKFAlt4ro2oqOeg6fc0QOvEQg
+Content-Type: application/json
+Accept: application/json
+
+{
+    "symptomatic": false,
+    "covid_positive": true,
+    "places": [1]
+}
+
+### log out
+DELETE https://hidden-cliffs-21927.herokuapp.com/api/user/sign_out
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJhNTgzYTZlYS0yZTU4LTQ1ZWItYmM1MC01NTg3YjZiZWFmOTQiLCJpZCI6OCwic3ViIjoiOCIsInNjcCI6ImFwaV91c2VyIiwiYXVkIjpudWxsLCJpYXQiOjE2MTc5MTMzMDMsImV4cCI6MTYxNzkxNjkwM30.iGSMY_v8NaApWu2B9mTKFAlt4ro2oqOeg6fc0QOvEQg
+
+
+### login jazbeen 
+POST https://hidden-cliffs-21927.herokuapp.com/api/user/sign_in?api_user[email]=gracielajazmin_chavez@ucol.mx&api_user[password]=1g6uanb

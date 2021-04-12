@@ -5,17 +5,20 @@ Rails.application.routes.draw do
   resources :places
   resources :institutes
   devise_for :admin_users, ActiveAdmin::Devise.config 
-  devise_for :user, controllers: {
-    sessions: 'sessions'
-  } 
-  devise_scope :user do
-      post '/api/user/login', to: "sessions#create"
-      delete '/api/user/logout', to: "sessions#create"
-  end
-  get "/api/users", to: "users#get_user"
-
-  
   ActiveAdmin.routes(self)
+  namespace :api do
+    devise_for :user, controllers:  {
+      sessions: "api/sessions"
+    }
+    post "incident", to: "incidents#create"
+    get "reports/place_reports", to: "reports#places_report_api" 
+    post "reports/place_reports", to: "reports#places_report_api" 
+  end
+  devise_for :users
+  get "/reports/user_reports", to: "reports#user_report" 
+  post "/reports/user_reports", to: "reports#user_report" 
+  get "/reports/place_reports", to: "reports#places_report_view" 
+  post "/reports/place_reports", to: "reports#places_report_view" 
 
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

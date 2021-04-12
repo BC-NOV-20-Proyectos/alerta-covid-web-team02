@@ -1,0 +1,68 @@
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<div class="header" id="header">
+        <h1 class="site_title" id="site_title">Users Report </h1>
+        <ul class="header-item tabs" id="utility_nav">
+          <li class="menu_item" id="logout"><a class="btn-logout" data-method="delete" href="<%= @path_signout %>">Logout</a></li>
+        </ul>
+</div>
+<div class="container h-100 mainContainer h-v-100">
+    <div class="row table-row h-v-100 align-items-center h-100">
+        <form class="col-12 formDate" method="POST" action="/reports/user_reports">
+            <div>
+                <label>from</label>
+                <input type="text" id="dateFrom" class="date_from" name="time_from" value="<%= params[:time_from] %>" autocomplete="off">
+            </div>
+            <div class="ms-2">
+                <label>To</label>
+                <input type="text" id="dateTo" name="time_to" value="<%= params[:time_to] %>" autocomplete="off">
+            </div>
+            <div class="ms-2">
+                <input type="submit" value="Generar">
+            </div>
+        </form>
+        <div class="table-responsive col-12">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Institute</th>
+                        <th>Section</th>
+                        <th>Name</th>
+                        <th class="text-center">Symptomatic</th>
+                        <th class="text-center">Covid Positive</th>
+                        <th class="text-center">Covid Negative</th>
+                    <tr>
+                </thead>
+                <tbody>
+                    <% @users_report.each do |incident| %>
+                    <tr>
+                        <td>
+                            <%= incident[:institute] %>
+                        </td>
+                        <td>
+                            <%= incident[:section] %>
+                        </td>
+                        <td>
+                            <%= incident[:name] %>
+                        </td>
+                        <td class="text-center">
+                            <div class='<%= "mark-check--red" if incident[:symptomatic] == 1 %>'>
+                            </div>
+                        </td>
+                        <td class="text-center">
+                            <div class='<%= "mark-check--red" if incident[:covid_positive] == 1 %>'>
+                            </div>
+                        </td>
+                        <td class="text-center">
+                            <div class='<%= "mark-check--green" if incident[:covid_negative] == 1 %>'>
+                            </div>
+                        </td>
+                    </tr>
+                    <%end%>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<%= javascript_pack_tag 'reports.js'%>

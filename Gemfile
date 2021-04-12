@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.7.0'
+ruby '2.7.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.5'
@@ -29,6 +29,15 @@ gem 'activeadmin'
 gem 'pg'
 gem 'devise-jwt'
 gem 'rqrcode'
+gem 'bootstrap', '~> 4.0.0'
+gem 'bootstrap-sass'
+gem 'arctic_admin'
+gem 'simple_form'
+gem 'ajax-datatables-rails'
+gem 'momentjs-rails', '~> 2.9',  :github => 'derekprior/momentjs-rails'
+gem 'datetimepicker-rails', github: 'zpaulovics/datetimepicker-rails', branch: 'master', submodules: true
+
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 

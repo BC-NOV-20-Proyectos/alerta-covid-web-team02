@@ -16,6 +16,7 @@ ActiveAdmin.register Place do
   # end
   index do 
     selectable_column
+    column :id
     column :name
     column :area
     column :institute do |place|

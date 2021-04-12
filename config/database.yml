@@ -7,18 +7,15 @@
 default: &default
   adapter: postgresql
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  user: root
-  password: toor
-  port: 5433
   encoding: unicode
 
 
 development:
   <<: *default
   database: db_covid_development
-  port: 5432
   host: localhost
   user: root
+  port: 5433
   password: toor
 
 

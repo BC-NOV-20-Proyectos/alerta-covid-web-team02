@@ -1,0 +1,40 @@
+<%= stylesheet_link_tag 'welcome', media: 'all', 'data-turbolinks-track' => true %>
+
+<main>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12">
+
+            <header class="header d-flex justify-content-between">
+                <%= image_tag('Logo.svg', class: 'logo') %>
+                <li style="list-style:none;" id="logout"><a class="btn-logout menu_item logout-index" data-method="delete" href="<%= @path_signout %>"></a></li>
+            </header>
+            </div>
+
+            <div class="col-5 pb-5  mr-4">
+                <div class="reports">
+                    <h2>Users reports</h2>
+                    <%= image_tag('user-img.svg', class: 'img-fluid img-reports') %>
+                    <a class="a-user" href="/reports/user_reports">
+                        <button class="btn-user-reports">Enter</button>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-5 pb-5 ml-4">
+                <div class="reports">
+                    <h2>Places reports</h2>
+                    <%= image_tag('places-img.svg', class: 'img-fluid img-reports') %>
+                    <a href="/reports/place_reports">
+                        <button class="btn-place-reports">Enter</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</main>
+
+<footer>
+    <%= image_tag('wave-separator.svg', class: 'wave-separator') %>
+</footer>
