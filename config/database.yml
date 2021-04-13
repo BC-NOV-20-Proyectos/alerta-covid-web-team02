@@ -15,7 +15,7 @@ development:
   database: db_covid_development
   host: localhost
   user: root
-  port: 5432
+  port: 5433
   password: toor
 
 
