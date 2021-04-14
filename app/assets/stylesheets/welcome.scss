@@ -1,0 +1,99 @@
+@import "bootstrap";
+
+
+.header{
+
+  padding: 1rem 0rem;
+  .logo{
+    width: 120px;
+  }
+
+  .logout-index{
+    list-style: none;
+  }
+
+  .logout-index::before{
+    font: 900 normal normal 30px 'Font Awesome 5 Free', 'Font Awesome 5 Pro';
+    content: "";
+    display: inline;
+    visibility: visible;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #323537;
+    padding: 15px 0;
+    text-align: center;
+    width: 50px;
+    font-size: 20px;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+main{
+
+
+  .container{
+
+    .reports{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      
+
+      .img-reports{
+      }
+
+      a{
+        margin-top: -70px;
+      
+        button{
+          font-size: 25px;
+          border-radius: 60px;
+          width: 230px;
+          height: 60px;
+          border: none;
+          color: white;
+  
+          transition: 0.2s ease;
+    
+          &:hover{
+            cursor: pointer;
+            transform: scale(1.1);
+          }
+        }
+
+        &:hover{
+          background: none;
+          background-color: none;
+        }
+
+        .btn-user-reports{
+          background-color: #5A4DCC;
+          box-shadow: 0px 4px 20px rgba(90, 77, 203, .8);
+
+        }
+  
+        .btn-place-reports{
+          background-color: #00E0AA;
+          box-shadow: 0px 4px 20px rgba(0, 224, 170, .8);
+  
+        }
+      }
+
+      .a-user{
+        margin-top: -88px;
+
+      }
+      
+    }
+  }
+}
+
+footer{
+  .wave-separator{
+    width: 100%;
+  }
+}
