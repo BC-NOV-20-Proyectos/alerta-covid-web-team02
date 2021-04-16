@@ -21,6 +21,15 @@ Accept: application/json
     "places": [1,2]
 }
 
+### recovery password
+POST http://localhost:3000/api/recovery/password
+Content-Type: application/json
+Accept: application/json
+
+{
+    "email": "jnegrete15@ucol.mx"
+}
+
 ### log out
 DELETE http://localhost:3000/api/user/sign_out
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJhNmM3MjMyYy04NzBlLTQ5MDAtOWI2MS00MjZjY2UyODg0NTciLCJpZCI6MTUsInN1YiI6IjE1Iiwic2NwIjoiYXBpX3VzZXIiLCJhdWQiOm51bGwsImlhdCI6MTYxODI2MTM4MCwiZXhwIjoxNjE4MjY0OTgwfQ.bTBvmYzgfA0PEaG9zXHB6w82vWvwUJ0rQ8oHGbez4Pc

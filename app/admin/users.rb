@@ -3,7 +3,7 @@ ActiveAdmin.register User do
   
   controller do
     def send_email
-      UserMailer.send_key(params[:user]).deliver_now
+      UserMailer.send_key(params[:user], 0).deliver_now
     end
   end
   # See permitted parameters documentation:

@@ -1,10 +1,12 @@
 class UserMailer < ApplicationMailer
     default from: "support@coviddetector.com"
 
-    def send_key(user)
+    def send_key(user, type)
         @user = user
-        
-        mail(to: @user[:email], subject: 'Here is your Access Key!')
+        @type = type
+        subject = 'Here is your Access Key!'
+        subject = 'Here is your new Acccess Key!' if type == 1
+        mail(to: @user[:email], subject: subject)
     end 
 
     def send_alert(places_name, user_email)
