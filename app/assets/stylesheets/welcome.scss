@@ -1,6 +1,15 @@
 @import "bootstrap";
 
 
+.h-v-min-100 {
+
+  min-height: 100vh;
+}
+
+body{
+  background-color: #f9f9f9;
+}
+
 .header{
 
   padding: 1rem 0rem;
