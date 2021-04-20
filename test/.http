@@ -5,6 +5,11 @@ POST http://localhost:3000/api/user/sign_in?api_user[email]=jnegrete15@ucol.mx&a
 ### login luispedro
 POST http://localhost:3000/api/user/sign_in?api_user[email]=lpedromendoza333@gmail.com&api_user[password]=1g7998m
 
+### login
+POST http://localhost:3000/user/login?user[email]=migueloceguera.m@gmail.com&user[password]=1g64s5p
+=======
+
+
 ### create incident
 POST http://localhost:3000/api/incident
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJiYjA0ZDI2OS0xMDQ4LTRlYmMtODU5Mi1jMWY1OTI0ZWI1YzIiLCJpZCI6MTUsInN1YiI6IjE1Iiwic2NwIjoiYXBpX3VzZXIiLCJhdWQiOm51bGwsImlhdCI6MTYxODI2ODcxMCwiZXhwIjoxNjE4MjcyMzEwfQ.nY3QTRg7GHjGt_4_Ti675OPruCkS4MPH9outmQVzW8I
@@ -19,7 +24,10 @@ Accept: application/json
 
 ### log out
 DELETE http://localhost:3000/api/user/sign_out
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIxNmQ2NGQyOS02YjY1LTQwYWQtYTFkYi1iMjRiODFlYWQ3NjciLCJpZCI6MTUsInN1YiI6IjE1Iiwic2NwIjoiYXBpX3VzZXIiLCJhdWQiOm51bGwsImlhdCI6MTYxODI2ODg1MCwiZXhwIjoxNjE4MjcyNDUwfQ.SJ_c4h8gclBPV011q4IHfeIet4DEK_MtSsRCg4zfBeo
+
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJhNmM3MjMyYy04NzBlLTQ5MDAtOWI2MS00MjZjY2UyODg0NTciLCJpZCI6MTUsInN1YiI6IjE1Iiwic2NwIjoiYXBpX3VzZXIiLCJhdWQiOm51bGwsImlhdCI6MTYxODI2MTM4MCwiZXhwIjoxNjE4MjY0OTgwfQ.bTBvmYzgfA0PEaG9zXHB6w82vWvwUJ0rQ8oHGbez4Pc
+
+
 
 ### generate reports
 GET http://localhost:3000/api/reports/place_reports
