@@ -1,37 +1,9 @@
 class ApplicationController < ActionController::Base
-  #protect_from_forgery with: :exception
-  #skip_before_action :verify_authenticity_token
-  #before_action :process_token
-  # def access_denied(exception)
-  #   redirect_to root_path, alert: exception.message
-  # end
+  
   protect_from_forgery prepend: true
 
   private
-
-  # def create
-  #   user = User.new(sign_up_params)
-  
-  #   if user.save
-  #   token = user.generate_jwt
-  #     render json: token.to_json
-  #   else
-  #     render json: { errors: { 'email or password' => ['is invalid'] } }, status: :unprocessable_entity
-  #   end
-  # end
-
-  # def authenticate_user!(options = {})
-  #   head :unauthorized unless signed_in?
-  # end
-
-  # def signed_in?
-  #   @current_user_id.present?
-  # end
-
-  # def current_user
-  #   @current_user ||= super || User.find(@current_user_id)
-  # end
-  
+ 
   def process_token
     if request.headers['Authorization'].present?
       begin
