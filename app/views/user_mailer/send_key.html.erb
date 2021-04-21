@@ -24,8 +24,8 @@
           </tr>
           <tr>
             <td style="color: #153643; font-family: Arial, sans-serif; font-size: 16px; line-height: 24px; padding: 20px 0 30px 0;">
-              <p style="margin: 0;">We appreciate your preference. </br>
-              Here your access key. Enjoy and protect yourself.</p>
+              <p style="margin: 0;"><%= @type == 0 ? "We appreciate your preference." : "This is your new Access Key"%> </br>
+              Here your access key. <%= "Enjoy and protect yourself" if @type == 0%>.</p>
             </td>
           </tr> 
         </table>

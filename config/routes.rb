@@ -13,13 +13,13 @@ Rails.application.routes.draw do
     post "incident", to: "incidents#create"
     get "reports/place_reports", to: "reports#places_report_api" 
     post "reports/place_reports", to: "reports#places_report_api" 
+    post "recovery/password", to: "recovery#recovery_password"
   end
   devise_for :users
   get "/reports/user_reports", to: "reports#user_report" 
   post "/reports/user_reports", to: "reports#user_report" 
   get "/reports/place_reports", to: "reports#places_report_view" 
   post "/reports/place_reports", to: "reports#places_report_view" 
-
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

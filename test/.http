@@ -22,6 +22,15 @@ Accept: application/json
     "places": [1,2]
 }
 
+### recovery password
+POST http://localhost:3000/api/recovery/password
+Content-Type: application/json
+Accept: application/json
+
+{
+    "email": "jnegrete15@ucol.mx"
+}
+
 ### log out
 DELETE http://localhost:3000/api/user/sign_out
 
