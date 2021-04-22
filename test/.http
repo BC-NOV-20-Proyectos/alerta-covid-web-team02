@@ -3,7 +3,7 @@
 POST http://localhost:3000/api/user/sign_in?api_user[email]=jnegrete15@ucol.mx&api_user[password]=1g6us81
 
 ### login luispedro
-POST http://localhost:3000/api/user/sign_in?api_user[email]=lpedromendoza333@gmail.com&api_user[password]=1g7998m
+POST http://localhost:3000/api/user/sign_in?api_user[email]=lpedromendoza333@gmail.com&api_user[password]=1g815it
 
 ### login
 POST http://localhost:3000/user/login?user[email]=migueloceguera.m@gmail.com&user[password]=1g64s5p
@@ -12,7 +12,8 @@ POST http://localhost:3000/user/login?user[email]=migueloceguera.m@gmail.com&use
 
 ### create incident
 POST http://localhost:3000/api/incident
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJiYjA0ZDI2OS0xMDQ4LTRlYmMtODU5Mi1jMWY1OTI0ZWI1YzIiLCJpZCI6MTUsInN1YiI6IjE1Iiwic2NwIjoiYXBpX3VzZXIiLCJhdWQiOm51bGwsImlhdCI6MTYxODI2ODcxMCwiZXhwIjoxNjE4MjcyMzEwfQ.nY3QTRg7GHjGt_4_Ti675OPruCkS4MPH9outmQVzW8I
+
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIzNTk1ODc5My0zODY3LTQ4ZWMtYWY4OS0zYjVkMTA1ZjIxYTIiLCJpZCI6MTUsInN1YiI6IjE1Iiwic2NwIjoiYXBpX3VzZXIiLCJhdWQiOm51bGwsImlhdCI6MTYxOTAzOTkxNSwiZXhwIjoxNjE5MDQzNTE1fQ.8EuTuTeGu-qbyyWauyVy4STRv3nO_k2KWFTIH6ncKbk
 Content-Type: application/json
 Accept: application/json
 
@@ -28,19 +29,20 @@ Content-Type: application/json
 Accept: application/json
 
 {
-    "email": "jnegrete15@ucol.mx"
+    "email": "lpedromendoza333@gmail.com"
 }
 
 ### log out
 DELETE http://localhost:3000/api/user/sign_out
 
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJhNmM3MjMyYy04NzBlLTQ5MDAtOWI2MS00MjZjY2UyODg0NTciLCJpZCI6MTUsInN1YiI6IjE1Iiwic2NwIjoiYXBpX3VzZXIiLCJhdWQiOm51bGwsImlhdCI6MTYxODI2MTM4MCwiZXhwIjoxNjE4MjY0OTgwfQ.bTBvmYzgfA0PEaG9zXHB6w82vWvwUJ0rQ8oHGbez4Pc
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIzNTk1ODc5My0zODY3LTQ4ZWMtYWY4OS0zYjVkMTA1ZjIxYTIiLCJpZCI6MTUsInN1YiI6IjE1Iiwic2NwIjoiYXBpX3VzZXIiLCJhdWQiOm51bGwsImlhdCI6MTYxOTAzOTkxNSwiZXhwIjoxNjE5MDQzNTE1fQ.8EuTuTeGu-qbyyWauyVy4STRv3nO_k2KWFTIH6ncKbk
+
 
 
 
 ### generate reports
 GET http://localhost:3000/api/reports/place_reports
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI1NGMwMzQ3YS01NjlkLTQzYzEtYWQ3NS1lMmFmNGViMTU5YTYiLCJpZCI6NCwic3ViIjoiNCIsInNjcCI6ImFwaV91c2VyIiwiYXVkIjpudWxsLCJpYXQiOjE2MTc4MzkxMDEsImV4cCI6MTYxNzg0MjcwMX0.3_sMYKvb5RZKcqwQQ4p0ENUS4JwtbRk7ACv0FpkU2bw
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIzNTk1ODc5My0zODY3LTQ4ZWMtYWY4OS0zYjVkMTA1ZjIxYTIiLCJpZCI6MTUsInN1YiI6IjE1Iiwic2NwIjoiYXBpX3VzZXIiLCJhdWQiOm51bGwsImlhdCI6MTYxOTAzNzg1MCwiZXhwIjoxNjE5MDQxNDUwfQ.3vrraf1TncAbDJBA2k818bbto0kfIPsu-vXQX7JBy7M
 Content-Type: application/json
 Accept: application/json
 
