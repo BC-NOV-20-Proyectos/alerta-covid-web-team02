@@ -1,8 +1,8 @@
 <%= stylesheet_link_tag 'welcome', media: 'all', 'data-turbolinks-track' => true %>
 
 <main>
-    <div class="container">
-        <div class="row justify-content-center">
+    <div class="container h-v-min-100">
+        <div class="row justify-content-center h-v-min-100">
             <div class="col-12">
 
             <header class="header d-flex justify-content-between">
@@ -11,7 +11,7 @@
             </header>
             </div>
 
-            <div class="col-5 pb-5  mr-4">
+            <div class="col-lg-5 col-12 pb-5  mr-4">
                 <div class="reports">
                     <h2>Users reports</h2>
                     <%= image_tag('user-img.svg', class: 'img-fluid img-reports') %>
@@ -21,7 +21,7 @@
                 </div>
             </div>
 
-            <div class="col-5 pb-5 ml-4">
+            <div class="col-lg-5 col-12 pb-5 ml-4">
                 <div class="reports">
                     <h2>Places reports</h2>
                     <%= image_tag('places-img.svg', class: 'img-fluid img-reports') %>
