@@ -24,6 +24,7 @@ module Api
                     render json: resJson
             end
         end
+        
         def respond_with(resource, _opts = {})
             resJson = {
                 "id": resource["id"],
@@ -32,6 +33,7 @@ module Api
             }
             render json: resJson
         end
+
         def respond_to_on_destroy
             render json: {
                 "error": false,

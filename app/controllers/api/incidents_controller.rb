@@ -27,14 +27,9 @@ module Api
             end
 
             if covid_positive == 1
-
                 notify_user(places_name, places[0])
             end
             
-            
-            
-            
-
             render json: {
                 "error": false,
                 "code": "INC_CREATED"
