@@ -9,15 +9,9 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   encoding: unicode
 
-
-development:
+  development:
   <<: *default
   database: db_covid_development
-  host: localhost
-  user: root
-  port: 5432
-  password: toor
-
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
