@@ -9,10 +9,9 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   encoding: unicode
 
-  development:
-  <<: *default
-  database: db_covid_development
-
+development:
+<<: *default
+database: db_covid_development
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
