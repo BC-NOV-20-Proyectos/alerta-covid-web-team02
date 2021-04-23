@@ -8,7 +8,9 @@ default: &default
   adapter: postgresql
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   encoding: unicode
-
+  user: root
+  password: teamcovid02
+  
 development:
   <<: *default
   database: db_covid_development
@@ -18,8 +20,6 @@ development:
 test:
   <<: *default
   database: db_covid_test
-  user: root
-  password: teamcovid02
 
 production:
   <<: *default
