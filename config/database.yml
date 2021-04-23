@@ -6,10 +6,9 @@
 #
 default: &default
   adapter: postgresql
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   encoding: unicode
-
-
+  
+  
 development:
   <<: *default
   database: db_covid_development
@@ -25,6 +24,11 @@ development:
 test:
   <<: *default
   database: db_covid_test
+  pool: <%= ENV['DB_POOL'] %>
+  username: <%= ENV['DB_USERNAME'] %>
+  password: <%= ENV['DB_PASSWORD'] %>
+  host: <%= ENV['DB_HOST'] %>
+  port: 5432
 
 production:
   <<: *default
