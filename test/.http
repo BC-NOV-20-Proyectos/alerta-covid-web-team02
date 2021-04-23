@@ -7,20 +7,17 @@ POST http://localhost:3000/api/user/sign_in?api_user[email]=lpedromendoza333@gma
 
 ### login
 POST http://localhost:3000/user/login?user[email]=migueloceguera.m@gmail.com&user[password]=1g64s5p
-=======
-
 
 ### create incident
 POST http://localhost:3000/api/incident
-
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIzNTk1ODc5My0zODY3LTQ4ZWMtYWY4OS0zYjVkMTA1ZjIxYTIiLCJpZCI6MTUsInN1YiI6IjE1Iiwic2NwIjoiYXBpX3VzZXIiLCJhdWQiOm51bGwsImlhdCI6MTYxOTAzOTkxNSwiZXhwIjoxNjE5MDQzNTE1fQ.8EuTuTeGu-qbyyWauyVy4STRv3nO_k2KWFTIH6ncKbk
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJhZTk1N2U0My03YTI2LTRmNjctOTkxMi1lMDJhNmIzYzQ4ZDUiLCJpZCI6MTUsInN1YiI6IjE1Iiwic2NwIjoiYXBpX3VzZXIiLCJhdWQiOm51bGwsImlhdCI6MTYxOTEzNTc5NSwiZXhwIjoxNjE5MTM5Mzk1fQ.j4Rf_9xkQYxa6tI1LYlzBCUfsiM8iT32uFVO16U8X6w
 Content-Type: application/json
 Accept: application/json
 
 {
     "symptomatic": true,
     "covid_positive": true,
-    "places": [1,2]
+    "places": [1]
 }
 
 ### recovery password
