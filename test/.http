@@ -1,27 +1,27 @@
 
 ### login jnegrete
-POST http://localhost:3000/api/user/sign_in?api_user[email]=jnegrete15@ucol.mx&api_user[password]=1g6us81
+POST http://localhost:3000/api/user/sign_in?api_user[email]=jnegrete15@ucol.mx&api_user[password]=1g8eda4
 
 ### login luispedro
-POST http://localhost:3000/api/user/sign_in?api_user[email]=lpedromendoza333@gmail.com&api_user[password]=1g815it
+POST http://localhost:3000/api/user/sign_in?api_user[email]=lpedromendoza333@gmail.com&api_user[password]=1g8ed89
 
 ### login
 POST http://localhost:3000/user/login?user[email]=migueloceguera.m@gmail.com&user[password]=1g64s5p
 
 ### create incident
 POST http://localhost:3000/api/incident
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJhZTk1N2U0My03YTI2LTRmNjctOTkxMi1lMDJhNmIzYzQ4ZDUiLCJpZCI6MTUsInN1YiI6IjE1Iiwic2NwIjoiYXBpX3VzZXIiLCJhdWQiOm51bGwsImlhdCI6MTYxOTEzNTc5NSwiZXhwIjoxNjE5MTM5Mzk1fQ.j4Rf_9xkQYxa6tI1LYlzBCUfsiM8iT32uFVO16U8X6w
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI4NjZlNzZmNi04ZGE3LTRjZDAtODAxMy01MWJjMGIzMmNlNzYiLCJpZCI6MjEsInN1YiI6IjIxIiwic2NwIjoiYXBpX3VzZXIiLCJhdWQiOm51bGwsImlhdCI6MTYxOTQ3Mzc1NSwiZXhwIjoxNjE5NDc3MzU1fQ.FqIe9a0KG2EszKoShpohnxwafX2rxjBNjtSJUNta1Eg
 Content-Type: application/json
 Accept: application/json
 
 {
     "symptomatic": true,
     "covid_positive": true,
-    "places": [1]
+    "places": [5]
 }
 
 ### recovery password
-POST http://localhost:3000/api/recovery/password
+POST https://hidden-cliffs-21927.herokuapp.com/api/recovery/password
 Content-Type: application/json
 Accept: application/json
 
@@ -31,22 +31,17 @@ Accept: application/json
 
 ### log out
 DELETE http://localhost:3000/api/user/sign_out
-
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIzNTk1ODc5My0zODY3LTQ4ZWMtYWY4OS0zYjVkMTA1ZjIxYTIiLCJpZCI6MTUsInN1YiI6IjE1Iiwic2NwIjoiYXBpX3VzZXIiLCJhdWQiOm51bGwsImlhdCI6MTYxOTAzOTkxNSwiZXhwIjoxNjE5MDQzNTE1fQ.8EuTuTeGu-qbyyWauyVy4STRv3nO_k2KWFTIH6ncKbk
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJjZjY5ODk3Ny1hNmU0LTQzZWYtYTYxNC05ZmQ0MGMxOGQwM2IiLCJpZCI6MTUsInN1YiI6IjE1Iiwic2NwIjoiYXBpX3VzZXIiLCJhdWQiOm51bGwsImlhdCI6MTYxOTQ3MzY5MSwiZXhwIjoxNjE5NDc3MjkxfQ.cgTvri8d4v9zNw32SfMCG2D4vxUteU97eDkS-jtrtC4
 
 
 
 
 ### generate reports
 GET http://localhost:3000/api/reports/place_reports
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIzNTk1ODc5My0zODY3LTQ4ZWMtYWY4OS0zYjVkMTA1ZjIxYTIiLCJpZCI6MTUsInN1YiI6IjE1Iiwic2NwIjoiYXBpX3VzZXIiLCJhdWQiOm51bGwsImlhdCI6MTYxOTAzNzg1MCwiZXhwIjoxNjE5MDQxNDUwfQ.3vrraf1TncAbDJBA2k818bbto0kfIPsu-vXQX7JBy7M
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIxZjIyN2U4MS1jMDFkLTQ2NzAtODU4Zi1iMzQ2MzI0ZDM2OGYiLCJpZCI6MTUsInN1YiI6IjE1Iiwic2NwIjoiYXBpX3VzZXIiLCJhdWQiOm51bGwsImlhdCI6MTYxOTQ3NDQ5MSwiZXhwIjoxNjE5NDc4MDkxfQ.9QfOCbILPrtNd--TZ9dfZZBv8juqYTt4YJmfpFW-fnQ
 Content-Type: application/json
 Accept: application/json
 
-{
-    "time_to": "2021-04-15",
-    "time_from": "2021-01-15" 
-}
 
 
 ### login production
@@ -54,8 +49,8 @@ POST https://hidden-cliffs-21927.herokuapp.com/api/user/sign_in?api_user[email]=
 
 
 ### test incidents production
-POST https://hidden-cliffs-21927.herokuapp.com/api/incident
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJhNTgzYTZlYS0yZTU4LTQ1ZWItYmM1MC01NTg3YjZiZWFmOTQiLCJpZCI6OCwic3ViIjoiOCIsInNjcCI6ImFwaV91c2VyIiwiYXVkIjpudWxsLCJpYXQiOjE2MTc5MTMzMDMsImV4cCI6MTYxNzkxNjkwM30.iGSMY_v8NaApWu2B9mTKFAlt4ro2oqOeg6fc0QOvEQg
+POST http://localhost:3000/api/incident
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJhZTk1N2U0My03YTI2LTRmNjctOTkxMi1lMDJhNmIzYzQ4ZDUiLCJpZCI6MTUsInN1YiI6IjE1Iiwic2NwIjoiYXBpX3VzZXIiLCJhdWQiOm51bGwsImlhdCI6MTYxOTE5Nzc4MywiZXhwIjoxNjE5MjAxMzgzfQ.CbKyIKc9FT-KnHGvY7OyDRy1Ta6JQN1X-ssoY3Zjj5Q
 Content-Type: application/json
 Accept: application/json
 
@@ -66,8 +61,8 @@ Accept: application/json
 }
 
 ### log out
-DELETE https://hidden-cliffs-21927.herokuapp.com/api/user/sign_out
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJhNTgzYTZlYS0yZTU4LTQ1ZWItYmM1MC01NTg3YjZiZWFmOTQiLCJpZCI6OCwic3ViIjoiOCIsInNjcCI6ImFwaV91c2VyIiwiYXVkIjpudWxsLCJpYXQiOjE2MTc5MTMzMDMsImV4cCI6MTYxNzkxNjkwM30.iGSMY_v8NaApWu2B9mTKFAlt4ro2oqOeg6fc0QOvEQg
+DELETE http://localhost:3000/api/user/sign_out
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIxZjIyN2U4MS1jMDFkLTQ2NzAtODU4Zi1iMzQ2MzI0ZDM2OGYiLCJpZCI6MTUsInN1YiI6IjE1Iiwic2NwIjoiYXBpX3VzZXIiLCJhdWQiOm51bGwsImlhdCI6MTYxOTQ3NDQ5MSwiZXhwIjoxNjE5NDc4MDkxfQ.9QfOCbILPrtNd--TZ9dfZZBv8juqYTt4YJmfpFW-fnQ
 
 
 ### login jazbeen 
