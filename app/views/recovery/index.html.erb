@@ -1,0 +1,25 @@
+<div id="wrapper">
+  <div id="content_wrapper">
+    <div class="flashes">
+            <% flash.each do |type, msg| %>  
+                <% if type != "alert" %>
+                <div class="flash flash_<%=type%>"><%=msg%></div>
+            <%end%>
+        <% end %>
+    </div>
+    <div id="active_admin_content" class="mainContainer">
+        <div id="login">
+            <h2>Recover Password</h2>
+            <form class="simple_form new_user" id="new_user" novalidate="novalidate" action="/recovery/password" accept-charset="UTF-8" method="post">
+                <div class="form-inputs">
+                    <div class="input email optional user_email"><label class="email optional" for="user_email">Email</label><input autocomplete="email" class="string email optional" autofocus="autofocus" type="email" value="" name="email" id="user_email"></div>
+                </div>
+                <div class="form-actions">
+                    <input type="submit" name="commit" value="Recover" class="btn" data-disable-with="Recover">
+                </div>
+            </form>
+            <br>
+        </div>
+    </div>
+  </div>
+</div>

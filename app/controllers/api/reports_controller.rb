@@ -10,7 +10,9 @@ module Api
                 time_to = params[:time_to]
                     time_from = params[:time_from]
             end
+            user = current_api_user
             @incidents = Incident.select("place_id, SUM(symptomatic) AS symptomatic, SUM(covid_positive) AS positive , SUM(covid_negative) AS negative").where("created_at between '#{time_from}'::timestamp and '#{time_to}'::timestamp").order('symptomatic DESC, negative DESC, positive DESC').group(:place_id);
+            @incidents = @incidents.filter { |inci| inci.place.institute.id == user.institute_id}
         end
         def places_report_api
             places_report
