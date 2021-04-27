@@ -67,3 +67,6 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIxZjIyN2U4MS1jMDFkLTQ2NzAtO
 
 ### login jazbeen 
 POST https://hidden-cliffs-21927.herokuapp.com/api/user/sign_in?api_user[email]=gracielajazmin_chavez@ucol.mx&api_user[password]=1g6uanb
+
+### filter section
+GET http://localhost:3000/api/filter/section?institute_id=1

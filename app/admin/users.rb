@@ -1,6 +1,6 @@
 ActiveAdmin.register User do
   after_action :send_email, only: [:create, :update]
-  
+  actions :all, except:[:destroy]
   controller do
     def send_email
       UserMailer.send_key(params[:user], 0).deliver_now
@@ -35,10 +35,11 @@ ActiveAdmin.register User do
       f.input :section_id, as: :select, collection: Section.all.map { |u| [u.name, u.id] }, include_blank: false
       f.input :reports, as: :boolean
     end
+    text_node javascript_include_tag "users_controllers"
     actions
   end
 
-  index do 
+  index do    
     selectable_column
     column :name
     column :email
@@ -49,7 +50,18 @@ ActiveAdmin.register User do
       "#{Section.find(u.section_id).name}"
     end
     column :reports
-    actions
+    
+    actions defaults: false do |row|
+      if true
+        text_node link_to "View", admin_user_path(row), class: "view_link member_link"
+      end
+      if true
+        text_node link_to "Edit", admin_user_path(row), class: "edit_link member_link"
+      end
+      if true
+        text_node link_to I18n.t('active_admin.delete'), admin_user_path(row), method: :delete, data: { confirm: I18n.t('active_admin.delete_confirmation') }, class: "delete_link member_link"
+      end
+    end
   end
   
 end

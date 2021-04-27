@@ -14,6 +14,7 @@ Rails.application.routes.draw do
     get "reports/place_reports", to: "reports#places_report_api" 
     post "reports/place_reports", to: "reports#places_report_api" 
     post "recovery/password", to: "recovery#recovery_password"
+    get "filter/section", to: "filter#filter_section"
   end
   devise_for :users
   get "/reports/user_reports", to: "reports#user_report" 
