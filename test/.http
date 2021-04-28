@@ -3,21 +3,21 @@
 POST http://localhost:3000/api/user/sign_in?api_user[email]=jnegrete15@ucol.mx&api_user[password]=1g8eda4
 
 ### login luispedro
-POST http://localhost:3000/api/user/sign_in?api_user[email]=lpedromendoza333@gmail.com&api_user[password]=1g8ed89
+POST http://localhost:3000/api/user/sign_in?api_user[email]=luispedro_mendoza@ucol.mx&api_user[password]=1g8jkh9
 
 ### login
-POST http://localhost:3000/user/login?user[email]=migueloceguera.m@gmail.com&user[password]=1g64s5p
+POST http://localhost:3000/user/login?user[email]=luispedro_mendoza@ucol.mx&user[password]=1g8jkh9
 
 ### create incident
 POST http://localhost:3000/api/incident
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI4NjZlNzZmNi04ZGE3LTRjZDAtODAxMy01MWJjMGIzMmNlNzYiLCJpZCI6MjEsInN1YiI6IjIxIiwic2NwIjoiYXBpX3VzZXIiLCJhdWQiOm51bGwsImlhdCI6MTYxOTQ3Mzc1NSwiZXhwIjoxNjE5NDc3MzU1fQ.FqIe9a0KG2EszKoShpohnxwafX2rxjBNjtSJUNta1Eg
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIxZmFiNTFlNS0xMmQzLTRjNGEtODI2NS0xMTQ2ZTBjNmJiYmEiLCJpZCI6Mywic3ViIjoiMyIsInNjcCI6ImFwaV91c2VyIiwiYXVkIjpudWxsLCJpYXQiOjE2MTk2NDUxODAsImV4cCI6MTYxOTY0ODc4MH0.i5dwptSHxbta1uKiZX5Lt-DIhrb3JBNCxAjLRNijr0Y
 Content-Type: application/json
 Accept: application/json
 
 {
     "symptomatic": true,
     "covid_positive": true,
-    "places": [5]
+    "places": [1]
 }
 
 ### recovery password

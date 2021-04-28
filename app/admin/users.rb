@@ -1,6 +1,5 @@
 ActiveAdmin.register User do
   after_action :send_email, only: [:create, :update]
-  actions :all, except:[:destroy]
   controller do
     def send_email
       UserMailer.send_key(params[:user], 0).deliver_now
@@ -52,13 +51,10 @@ ActiveAdmin.register User do
     column :reports
     
     actions defaults: false do |row|
-      if true
-        text_node link_to "View", admin_user_path(row), class: "view_link member_link"
-      end
-      if true
-        text_node link_to "Edit", admin_user_path(row), class: "edit_link member_link"
-      end
-      if true
+      text_node link_to "View", admin_user_path(row), class: "view_link member_link"
+      text_node link_to "Edit", edit_admin_user_path(row), class: "edit_link member_link"
+
+      if Incident.where("user_id = #{row.id}").length == 0
         text_node link_to I18n.t('active_admin.delete'), admin_user_path(row), method: :delete, data: { confirm: I18n.t('active_admin.delete_confirmation') }, class: "delete_link member_link"
       end
     end
